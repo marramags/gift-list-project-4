@@ -4,6 +4,7 @@ import { signUp } from '../../utilities/users-service';
 export default class SignupForm extends Component{
     state = {
         name: '',
+        username:'',
         email: '',
         password: '',
         confirm: '',
@@ -44,6 +45,13 @@ export default class SignupForm extends Component{
                     <input type="text"
                     name="name"
                     value={this.state.name}
+                    onChange={this.handleChange}
+                    required
+                    />
+                    <label>Username</label>
+                    <input type="text"
+                    name="username"
+                    value={this.state.username}
                     onChange={this.handleChange}
                     required
                     />
