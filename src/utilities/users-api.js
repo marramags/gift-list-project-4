@@ -52,7 +52,7 @@ export default async function sendRequest(url, method = 'GET', payload = null) {
   throw new Error('Bad Request');
 }
 
-export function checkToken() {
-  // http://localhost:3001/api/users/check-token
-  return sendRequest(`${BASE_URL}/check-token`);
-}
+// export function checkToken() {
+//   // http://localhost:3001/api/users/check-token
+//   return sendRequest(`${BASE_URL}/check-token`);
+// }
