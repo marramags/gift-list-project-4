@@ -35,7 +35,7 @@ function App() {
       :
       <AuthPage setUser={setUser}/>
       }
-      <NewGiftForm />
+      
     </div>
   );
 }
