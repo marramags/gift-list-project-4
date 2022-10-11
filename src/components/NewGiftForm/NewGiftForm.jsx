@@ -6,7 +6,12 @@ export default function NewGiftForm() {
     //endpoint to the database
 
     const [gift, setGift] = useState({
-        
+        name: '',
+        relationType: '',
+        item:'',
+        description:'',
+        storeLink:'',
+        bought:''
     })
 
     const [error, setError] = useState('');
@@ -52,6 +57,12 @@ export default function NewGiftForm() {
             <input type="text" name="description"/>
             <label>Store/Link</label>
             <input type="text" name="storeLink"/>
+            <label>Bought?</label>
+            <select type="text" name="bought">
+                {/* <option style="display:none"></option> */}
+                <option value="false">false</option>
+                <option value="true">true</option>
+            </select>
             <button type="submit">ADD GIFT</button>
         </form>
         </div>
