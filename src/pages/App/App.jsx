@@ -11,11 +11,11 @@ import {getUser} from '../../utilities/users-service';
 function App() {
 
   const giftArray = [
-    {name:"Jeryl", relation: "husband", item:"movie poster", description: 'Marvel movie poster', storeLink:'greymatterart.com'}
+    {name:"Jeryl", relation: "Partner", item:"movie poster", description: 'Marvel movie poster', storeLink:'greymatterart.com'}
   ]
 
   const [user, setUser] = useState(getUser())
-  const [gifts, setGifts] = useState([]);
+  // const [gifts, setGifts] = useState([]);
   
 
   return (

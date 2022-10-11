@@ -1,10 +1,35 @@
 import { useState } from "react";
+import * as usersService from '../../utilities/users-service';
 
 export default function NewGiftForm() {
 
-    // const [gift, setGift] = useState({
+    //endpoint to the database
 
-    // })
+    const [gift, setGift] = useState({
+        
+    })
+
+    const [error, setError] = useState('');
+
+
+    function handleChange(evt) {
+        setGift({...gift,  [evt.target.name]:evt.target.value});
+        setError('');
+    }
+
+    async function handleSubmit(evt) {
+        // Prevent form from being submitted to the server
+    evt.preventDefault();
+    try {
+      // The promise returned by the signUp service method 
+      // will resolve to the user object included in the
+      // payload of the JSON Web Token (JWT)
+      const user = await usersService.addGift(credentials);
+      setGift(gift);
+    } catch {
+      setError('Log In Failed - Try Again');
+    }
+  }
 
     return (
         <div>
