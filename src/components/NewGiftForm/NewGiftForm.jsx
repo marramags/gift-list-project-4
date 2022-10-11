@@ -1,11 +1,12 @@
 import { useState } from "react";
-import * as usersService from '../../utilities/users-service';
+// import * as usersService from '../../utilities/users-service';
+import * as giftsAPI from '../../utilities/gifts-api';
 
 export default function NewGiftForm() {
 
     //endpoint to the database
 
-    const [gift, setGift] = useState({
+    const [giftInfo, setGiftInfo] = useState({
         name: '',
         relationType: '',
         item:'',
@@ -18,7 +19,7 @@ export default function NewGiftForm() {
 
 
     function handleChange(evt) {
-        setGift({...gift,  [evt.target.name]:evt.target.value});
+        setGiftInfo({...giftInfo,  [evt.target.name]:evt.target.value});
         setError('');
     }
 
@@ -29,21 +30,21 @@ export default function NewGiftForm() {
       // The promise returned by the signUp service method 
       // will resolve to the user object included in the
       // payload of the JSON Web Token (JWT)
-      const user = await usersService.addGift(credentials);
-      setGift(gift);
+      const gift = await giftsAPI.addGift(giftInfo);
+      setGiftInfo(gift);
     } catch {
-      setError('Log In Failed - Try Again');
+      setError('Try adding gift again');
     }
   }
 
     return (
         <div>
         <h2>Add a Gift!</h2>
-        <form>
+        <form autoComplete="off" onSubmit={handleSubmit}>
             <label>Recipient Name</label>
-            <input type="text" name="name"/>
+            <input type="text" name="name" onChange={handleChange} required/>
             <label>Relation Type</label>
-            <select type="text" name="relationType">
+            <select type="text" name="relationType" onChange={handleChange} required>
                 {/* <option style="display:none"></option> */}
                 <option value="Family">Family</option>
                 <option value="Friend">Friend</option>
@@ -52,19 +53,21 @@ export default function NewGiftForm() {
                 <option value="Other">Other</option>
             </select>
             <label>Gift Item</label>
-            <input type="text" name="item"/>
+            <input type="text" name="item" onChange={handleChange} required/>
             <label>Description</label>
-            <input type="text" name="description"/>
+            <input type="textarea" name="description" onChange={handleChange} required/>
             <label>Store/Link</label>
-            <input type="text" name="storeLink"/>
+            <input type="text" name="storeLink" onChange={handleChange} required/>
             <label>Bought?</label>
-            <select type="text" name="bought">
+            <select type="text" name="bought" onChange={handleChange} required>
                 {/* <option style="display:none"></option> */}
-                <option value="false">false</option>
-                <option value="true">true</option>
+                <option value="false">No</option>
+                <option value="true">Yes</option>
             </select>
             <button type="submit">ADD GIFT</button>
         </form>
+        <p className="error-message">&nbsp;{error}</p>
+
         </div>
     )
 }

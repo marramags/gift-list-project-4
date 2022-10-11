@@ -1,6 +1,6 @@
 import './App.css';
 import GiftListPage from '../GiftListPage/GiftListPage'; 
-import NewGiftForm from '../../components/NewGiftForm/NewGiftForm';
+// import NewGiftForm from '../../components/NewGiftForm/NewGiftForm';
 import AuthPage from '../AuthPage/AuthPage';
 import Recipients from '../Recipients/Recipients';
 import { useState } from 'react';
@@ -10,9 +10,9 @@ import {getUser} from '../../utilities/users-service';
 
 function App() {
 
-  const giftArray = [
-    {name:"Jeryl", relation: "Partner", item:"movie poster", description: 'Marvel movie poster', storeLink:'greymatterart.com'}
-  ]
+  // const giftArray = [
+  //   {name:"Jeryl", relation: "Partner", item:"movie poster", description: 'Marvel movie poster', storeLink:'greymatterart.com'}
+  // ]
 
   const [user, setUser] = useState(getUser())
   // const [gifts, setGifts] = useState([]);
