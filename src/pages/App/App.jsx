@@ -15,7 +15,7 @@ function App() {
   // ]
 
   const [user, setUser] = useState(getUser())
-  // const [gifts, setGifts] = useState([]);
+  const [gifts, setGifts] = useState([]);
   
 
   return (
@@ -27,7 +27,7 @@ function App() {
       <>
       <NavBar user={user} setUser={setUser}/>
       <Routes>
-        <Route path="/giftlist" element={<GiftListPage />} />
+        <Route path="/giftlist" element={<GiftListPage gifts={gifts}/>} />
         <Route path="/recipients" element={<Recipients />} />
 
       </Routes>

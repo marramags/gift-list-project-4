@@ -22,10 +22,10 @@ const giftItemSchema = new Schema ({
 })
 
 const recipientSchema = new Schema ({
-    user: { 
-        type: Schema.Types.ObjectId, 
-        ref: 'User',
-        required: true },
+    // user: { 
+    //     type: Schema.Types.ObjectId, 
+    //     ref: 'User',
+    //     required: true },
     name: {
         type: String,
         trim: true,

@@ -1,12 +1,16 @@
 import NewGiftForm from "../../components/NewGiftForm/NewGiftForm"
 
-export default function GiftListPage() {
+export default function GiftListPage({gifts}) {
 
+    // const giftingList = gifts.map((g, index) => (
+    //     <ToDoListItem value={t} index={index} />
+    //   ));
 
     return(
         <>
         <h1>Gifting List</h1>
         <ul>
+
             <NewGiftForm />
         </ul>
         </>

@@ -21,6 +21,16 @@ export default function NewGiftForm() {
     function handleChange(evt) {
         setGiftInfo({...giftInfo,  [evt.target.name]:evt.target.value});
         setError('');
+        // console.log(giftInfo)
+        // const{name, value}= evt.target;
+
+        // setGiftInfo(prevGiftInfo => {
+        //     return {
+        //         ...prevGiftInfo,
+        //         [name]: value
+        //     }
+        // }
+        //     )
     }
 
     async function handleSubmit(evt) {
@@ -32,6 +42,7 @@ export default function NewGiftForm() {
       // payload of the JSON Web Token (JWT)
       const gift = await giftsAPI.addGift(giftInfo);
       setGiftInfo(gift);
+    //   console.log(giftInfo)
     } catch {
       setError('Try adding gift again');
     }
@@ -42,9 +53,9 @@ export default function NewGiftForm() {
         <h2>Add a Gift!</h2>
         <form autoComplete="off" onSubmit={handleSubmit}>
             <label>Recipient Name</label>
-            <input type="text" name="name" onChange={handleChange} required/>
+            <input type="text" name="name" value={giftInfo.name} onChange={handleChange} required/>
             <label>Relation Type</label>
-            <select type="text" name="relationType" onChange={handleChange} required>
+            <select type="text" name="relationType" value={giftInfo.relationType} onChange={handleChange} required>
                 {/* <option style="display:none"></option> */}
                 <option value="Family">Family</option>
                 <option value="Friend">Friend</option>
@@ -53,13 +64,13 @@ export default function NewGiftForm() {
                 <option value="Other">Other</option>
             </select>
             <label>Gift Item</label>
-            <input type="text" name="item" onChange={handleChange} required/>
+            <input type="text" name="item" value={giftInfo.item} onChange={handleChange} required/>
             <label>Description</label>
-            <input type="textarea" name="description" onChange={handleChange} required/>
+            <textarea type="text" name="description" value={giftInfo.description} onChange={handleChange} required/>
             <label>Store/Link</label>
-            <input type="text" name="storeLink" onChange={handleChange} required/>
+            <input type="text" name="storeLink" value={giftInfo.storeLink} onChange={handleChange} required/>
             <label>Bought?</label>
-            <select type="text" name="bought" onChange={handleChange} required>
+            <select type="text" name="bought" value={giftInfo.bought} onChange={handleChange} required>
                 {/* <option style="display:none"></option> */}
                 <option value="false">No</option>
                 <option value="true">Yes</option>
