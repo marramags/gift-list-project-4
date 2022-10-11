@@ -4,3 +4,7 @@ async function addGift(req, res) {
     const giftList = await Recipient.req.body._id;
     res.json(giftList)
 }
+
+module.exports = {
+    addGift,
+}
