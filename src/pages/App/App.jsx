@@ -1,5 +1,6 @@
 import './App.css';
 import GiftListPage from '../GiftListPage/GiftListPage'; 
+import NewGiftForm from '../../components/NewGiftForm/NewGiftForm';
 import AuthPage from '../AuthPage/AuthPage';
 import Recipients from '../Recipients/Recipients';
 import { useState } from 'react';
@@ -32,6 +33,7 @@ function App() {
       :
       <AuthPage setUser={setUser}/>
       }
+      <NewGiftForm />
     </div>
   );
 }
