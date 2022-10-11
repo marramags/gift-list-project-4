@@ -15,6 +15,8 @@ function App() {
   ]
 
   const [user, setUser] = useState(getUser())
+  const [gifts, setGifts] = useState([]);
+  
 
   return (
     <div className="App">
