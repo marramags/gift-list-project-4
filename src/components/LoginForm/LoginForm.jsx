@@ -34,7 +34,7 @@ export default function LoginForm({setUser}) {
         {/* <h1>Login Form</h1> */}
         <form autoComplete="off" onClick={handleSubmit}>
             <label>Email</label>
-            <input type="text" name="email" value={credentials.email} onChange={handleChange} required />
+            <input type="email" name="email" value={credentials.email} onChange={handleChange} required />
             <label>Password</label>
             <input type="password" name="password" value={credentials.password} onChange={handleChange} required/>
             <button type="submit">Log In</button>
