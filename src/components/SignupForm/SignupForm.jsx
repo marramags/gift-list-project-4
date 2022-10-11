@@ -48,13 +48,13 @@ export default class SignupForm extends Component{
                     onChange={this.handleChange}
                     required
                     />
-                    <label>Username</label>
+                    {/* <label>Username</label>
                     <input type="text"
                     name="username"
                     value={this.state.username}
                     onChange={this.handleChange}
                     required
-                    />
+                    /> */}
                     <label>Email</label>
                     <input type="email" 
                     name="email" 

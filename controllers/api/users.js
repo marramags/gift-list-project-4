@@ -22,7 +22,7 @@ async function create(req, res) {
   async function login(req, res) {
     try {
       //Find the user by their email address or username
-      const user = await User.findOne({username:req.body.username});
+      const user = await User.findOne({email:req.body.email});
       if (!user) throw new Error();
       //Check if the password matches
       const match = await bcrypt.compare(req.body.password, user.password);
