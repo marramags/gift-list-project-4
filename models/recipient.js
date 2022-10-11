@@ -4,24 +4,28 @@ const Schema = mongoose.Schema;
 const giftItemSchema = new Schema ({
     item: {
         type: String,
+        trim: true,
         required:true
     },
     description: {
-        type: String
+        type: String,
+        trim: true,
     },
     storeLink: {
-        type: String
+        type: String,
+        trim: true,
     }
 })
 
 const recipientSchema = new Schema ({
     name: {
         type: String,
+        trim: true,
         required:true
     },
     relationType: {
         type: String,
-        enum: ['Family', 'Friend', 'Work', 'Other'],
+        enum: ['Family', 'Friend', 'Partner', 'Co-worker', 'Other'],
         required:true
     }, 
     giftItems: [giftItemSchema]
