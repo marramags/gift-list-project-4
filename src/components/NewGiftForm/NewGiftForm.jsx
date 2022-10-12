@@ -7,8 +7,8 @@ export default function NewGiftForm({user, setGifts}) {
     //endpoint to the database
 
     const [giftInfo, setGiftInfo] = useState({
-        name: '',
-        relationType: '',
+        // name: '',
+        // relationType: '',
         item:'',
         description:'',
         storeLink:'',
@@ -43,17 +43,17 @@ export default function NewGiftForm({user, setGifts}) {
         <div>
         <h2>Add a Gift!</h2>
         <form autoComplete="off" onSubmit={handleSubmit}>
-            <label>Recipient Name</label>
+            {/* <label>Recipient Name</label>
             <input type="text" name="name" value={giftInfo.name} onChange={handleChange} required/>
             <label>Relation Type</label>
             <select type="text" name="relationType" value={giftInfo.relationType} onChange={handleChange} required>
-                {/* <option style="display:none"></option> */}
+                <option style="display:none"></option>
                 <option value="Family">Family</option>
                 <option value="Friend">Friend</option>
                 <option value="Partner">Partner</option>
                 <option value="Co-worker">Co-worker</option>
                 <option value="Other">Other</option>
-            </select>
+            </select> */}
             <label>Gift Item</label>
             <input type="text" name="item" value={giftInfo.item} onChange={handleChange} required/>
             <label>Description</label>
