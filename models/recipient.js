@@ -6,10 +6,6 @@ const giftItemSchema = new Schema ({
         type: String,
         // trim: true,
         // required:true
-    },
-    description: {
-        type: String,
-        // trim: true,
     }
 })
 

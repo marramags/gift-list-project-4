@@ -7,8 +7,14 @@ export function addGift(userData) {
     return sendRequest(BASE_URL, 'POST', userData);
 }
 
+// addRecipient
+export function addRecipient(recipientData) {
+    return sendRequest(BASE_URL, 'POST', recipientData);
+}
+
 //retrieve gift list
-export function getList() {
+async function getAll() {
     return sendRequest(BASE_URL);
 }
+
 
