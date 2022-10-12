@@ -39,6 +39,8 @@ export default function NewGiftForm({user, setGifts}) {
     }
   }
 
+  
+
     return (
         <div>
         <h2>Add a Gift!</h2>

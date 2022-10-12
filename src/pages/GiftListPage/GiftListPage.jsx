@@ -3,7 +3,7 @@ import NewGiftForm from "../../components/NewGiftForm/NewGiftForm"
 export default function GiftListPage({gifts, user, setGifts}) {
 
     // const giftingList = gifts.map((g, index) => (
-    //     <ToDoListItem value={t} index={index} />
+    //     <ToDoListItem value={g} index={index} />
     //   ));
 
     return(
