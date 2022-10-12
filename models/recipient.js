@@ -5,7 +5,7 @@ const giftItemSchema = new Schema ({
     item: {
         type: String,
         // trim: true,
-        required:true
+        // required:true
     },
     description: {
         type: String,
@@ -29,13 +29,13 @@ const recipientSchema = new Schema ({
     name: {
         type: String,
         // trim: true,
-        required:true
+        // required:true
     },
-    // relationType: {
-    //     type: String,
-    //     enum: ['Family', 'Friend', 'Partner', 'Co-worker', 'Other'],
-    //     required:true
-    // }, 
+    relationType: {
+        type: String,
+        enum: ['Family', 'Friend', 'Partner', 'Co-worker', 'Other'],
+        // required:true
+    }, 
     giftItems: [giftItemSchema]
 },{
     timestamps: true
