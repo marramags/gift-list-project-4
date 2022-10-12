@@ -6,19 +6,20 @@ const giftItemSchema = new Schema ({
         type: String,
         // trim: true,
         // required:true
-    },
-    description: {
-        type: String,
-        // trim: true,
-    },
-    storeLink: {
-        type: String,
-        // trim: true,
-    },
-    bought:{
-        type: Boolean,
-        default: false,
     }
+    // ,
+    // description: {
+    //     type: String,
+    //     // trim: true,
+    // },
+    // storeLink: {
+    //     type: String,
+    //     // trim: true,
+    // },
+    // bought:{
+    //     type: Boolean,
+    //     default: false,
+    // }
 })
 
 const recipientSchema = new Schema ({
