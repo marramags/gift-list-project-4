@@ -1,18 +1,26 @@
-import NewGiftForm from "../../components/NewGiftForm/NewGiftForm"
+import NewGiftForm from "../../components/NewGiftForm/NewGiftForm";
+// import GiftItem from "../GiftItem/GiftItem";
 
 export default function GiftListPage({gifts, user, setGifts}) {
 
-    // const giftingList = gifts.map((g, index) => (
-    //     <ToDoListItem value={g} index={index} />
+    // const giftItemList = gifts.map((g, index) => (
+    //     <GiftItem value={g} index={index} />
+
     //   ));
+
+    // console.log(`GL Page: ${giftItemList}`)
+
+
 
     return(
         <>
         <h1>Gifting List</h1>
+        {/* {giftItemList} */}
         <ul>
-
-            <NewGiftForm user={user} setGifts={setGifts} />
+      
         </ul>
+        <NewGiftForm user={user} setGifts={setGifts} />
+
         </>
     )
 }

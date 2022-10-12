@@ -29,7 +29,6 @@ function App() {
       <Routes>
         <Route path="/giftlist" element={<GiftListPage gifts={gifts} user={user} setGifts={setGifts}/>} />
         <Route path="/recipients" element={<Recipients user={user}/>} />
-
       </Routes>
       </>
       :
