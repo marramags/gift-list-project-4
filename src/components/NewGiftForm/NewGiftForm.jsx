@@ -9,10 +9,10 @@ export default function NewGiftForm({user, setGifts}) {
     const [giftInfo, setGiftInfo] = useState({
         name: '',
         relationType: '',
-        // item:'',
-        // description:'',
-        // storeLink:'',
-        // bought:''
+        item:'',
+        description:'',
+        storeLink:'',
+        bought:''
     })
 
     const [error, setError] = useState('');
@@ -21,18 +21,6 @@ export default function NewGiftForm({user, setGifts}) {
     function handleChange(evt) {
         setGiftInfo({...giftInfo,  [evt.target.name]:evt.target.value});
         setError('');
-        // console.log(`setgiftinfo: ${setGiftInfo}`)
-
-        // console.log(giftInfo)
-        // const{name, value}= evt.target;
-
-        // setGiftInfo(prevGiftInfo => {
-        //     return {
-        //         ...prevGiftInfo,
-        //         [name]: value
-        //     }
-        // }
-        //     )
     }
 
     async function handleSubmit(evt) {
@@ -44,6 +32,7 @@ export default function NewGiftForm({user, setGifts}) {
       // payload of the JSON Web Token (JWT)
       const gift = await giftsAPI.addGift(giftInfo);
       setGifts(gift);
+      evt.target.reset();
       console.log(`handle submit giftinfo: ${setGifts}`)
     } catch {
       setError('Try adding gift again');
@@ -65,7 +54,7 @@ export default function NewGiftForm({user, setGifts}) {
                 <option value="Co-worker">Co-worker</option>
                 <option value="Other">Other</option>
             </select>
-            {/* <label>Gift Item</label>
+            <label>Gift Item</label>
             <input type="text" name="item" value={giftInfo.item} onChange={handleChange} required/>
             <label>Description</label>
             <textarea type="text" name="description" value={giftInfo.description} onChange={handleChange} required/>
@@ -73,10 +62,10 @@ export default function NewGiftForm({user, setGifts}) {
             <input type="text" name="storeLink" value={giftInfo.storeLink} onChange={handleChange} required/>
             <label>Bought?</label>
             <select type="text" name="bought" value={giftInfo.bought} onChange={handleChange} required>
-                <option style="display:none"></option>
+                {/* <option style="display:none"></option> */}
                 <option value="false">No</option>
                 <option value="true">Yes</option>
-            </select> */}
+            </select>
             <button type="submit">ADD GIFT</button>
         </form>
         <p className="error-message">&nbsp;{error}</p>
