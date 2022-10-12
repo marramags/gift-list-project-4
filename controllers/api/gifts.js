@@ -1,7 +1,6 @@
 const Recipient = require('../../models/recipient');
 
 async function addGift(req, res) { //create recipient and gift
-   
     const giftList = await new Recipient(req.body);
     // console.log(req.body)
     console.log(giftList)
@@ -35,6 +34,13 @@ async function addGift(req, res) { //create recipient and gift
 
 }
 
+async function getAll(req, res) {
+    const yourownvariable = await Recipient.find({})
+    res.json(yourownvariable)
+  
+  }
+
 module.exports = {
     addGift,
+    getAll,
 }
