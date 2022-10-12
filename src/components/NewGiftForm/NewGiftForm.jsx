@@ -33,7 +33,7 @@ export default function NewGiftForm({user, setGifts}) {
       const gift = await giftsAPI.addGift(giftInfo);
       setGifts(gift);
       evt.target.reset();
-      console.log(`handle submit giftinfo: ${setGifts}`)
+      console.log(`handle submit giftinfo: ${gift}`)
     } catch {
       setError('Try adding gift again');
     }
