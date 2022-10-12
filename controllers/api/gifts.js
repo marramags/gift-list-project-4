@@ -1,15 +1,26 @@
 const Recipient = require('../../models/recipient');
 
-async function addGift(req, res) {
+async function addGift(req, res) { //create recipient and gift
+   
     const giftList = await new Recipient(req.body);
-    console.log(`this is the req.body: ${req.body}`)
+    Recipient.giftItems.push( 
+        { 
+           item: req.body.giftItems.item,  
+           description: req.body.giftItems.description,
+           storeLink: req.body.giftItems.storeLink,
+           bought: req.body.giftItems.bought
+        });
+    
+    console.log(`this is the req.body: ${req.body.giftItems}`)
+
     giftList.save()
     res.json(giftList)
     console.log(`this is the gift list: ${giftList}`)
     // try{
     //     const addGiftList = await Recipient.create(req.body);
-    //     // addGiftList.save
-    //     console.log(req.body)
+    //     addGiftList.save
+    //     // Recipient.giftItems.push({req.body})
+    //     console.log(addGiftList)
     //     res.json(addGiftList)
     //     console.log(`this is the gift list: ${addGiftList}`)
 
