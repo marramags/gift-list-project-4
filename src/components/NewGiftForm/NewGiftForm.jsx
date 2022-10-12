@@ -10,9 +10,9 @@ export default function NewGiftForm({user, setGifts}) {
         name: '',
         relationType: '',
         item:'',
-        description:'',
-        storeLink:'',
-        bought:''
+        // description:'',
+        // storeLink:'',
+        // bought:''
     })
 
     const [error, setError] = useState('');
@@ -62,16 +62,16 @@ export default function NewGiftForm({user, setGifts}) {
             </select>
             <label>Gift Item</label>
             <input type="text" name="item" value={giftInfo.item} onChange={handleChange} required/>
-            <label>Description</label>
+            {/* <label>Description</label>
             <textarea type="text" name="description" value={giftInfo.description} onChange={handleChange} required/>
             <label>Store/Link</label>
             <input type="text" name="storeLink" value={giftInfo.storeLink} onChange={handleChange} required/>
             <label>Bought?</label>
             <select type="text" name="bought" value={giftInfo.bought} onChange={handleChange} required>
-                {/* <option style="display:none"></option> */}
+                <option style="display:none"></option>
                 <option value="false">No</option>
                 <option value="true">Yes</option>
-            </select>
+            </select> */}
             <button type="submit">ADD GIFT</button>
         </form>
         <p className="error-message">&nbsp;{error}</p>
