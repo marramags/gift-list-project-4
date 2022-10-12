@@ -2,7 +2,7 @@ import { useState } from "react";
 // import * as usersService from '../../utilities/users-service';
 import * as giftsAPI from '../../utilities/gifts-api';
 
-export default function NewGiftForm() {
+export default function NewGiftForm({user}) {
 
     //endpoint to the database
 

@@ -27,8 +27,8 @@ function App() {
       <>
       <NavBar user={user} setUser={setUser}/>
       <Routes>
-        <Route path="/giftlist" element={<GiftListPage gifts={gifts}/>} />
-        <Route path="/recipients" element={<Recipients />} />
+        <Route path="/giftlist" element={<GiftListPage gifts={gifts} user={user}/>} />
+        <Route path="/recipients" element={<Recipients user={user}/>} />
 
       </Routes>
       </>

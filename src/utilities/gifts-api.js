@@ -1,13 +1,13 @@
-import * as usersAPI from './users-api';
+import sendRequest from './send-request';
 
 const BASE_URL = '/api/giftlist';
 
 //retrieve gift list
 export function getList() {
-    return usersAPI(`${BASE_URL}`);
+    return sendRequest(`${BASE_URL}`);
 }
 
 //add an gift & recipient to list
 export function addGift() {
-    return usersAPI(`${BASE_URL}/addgift`, 'POST');
+    return sendRequest(`${BASE_URL}/addgift`, 'POST');
 }
