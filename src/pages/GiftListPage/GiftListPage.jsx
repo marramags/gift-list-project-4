@@ -1,6 +1,6 @@
 import NewGiftForm from "../../components/NewGiftForm/NewGiftForm"
 
-export default function GiftListPage({gifts, user}) {
+export default function GiftListPage({gifts, user, setGifts}) {
 
     // const giftingList = gifts.map((g, index) => (
     //     <ToDoListItem value={t} index={index} />
@@ -11,7 +11,7 @@ export default function GiftListPage({gifts, user}) {
         <h1>Gifting List</h1>
         <ul>
 
-            <NewGiftForm user={user} />
+            <NewGiftForm user={user} setGifts={setGifts} />
         </ul>
         </>
     )

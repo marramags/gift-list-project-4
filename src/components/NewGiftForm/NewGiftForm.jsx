@@ -2,13 +2,13 @@ import { useState } from "react";
 // import * as usersService from '../../utilities/users-service';
 import * as giftsAPI from '../../utilities/gifts-api';
 
-export default function NewGiftForm({user}) {
+export default function NewGiftForm({user, setGifts}) {
 
     //endpoint to the database
 
     const [giftInfo, setGiftInfo] = useState({
         name: '',
-        relationType: '',
+        // relationType: '',
         item:'',
         description:'',
         storeLink:'',
@@ -21,6 +21,8 @@ export default function NewGiftForm({user}) {
     function handleChange(evt) {
         setGiftInfo({...giftInfo,  [evt.target.name]:evt.target.value});
         setError('');
+        // console.log(`setgiftinfo: ${setGiftInfo}`)
+
         // console.log(giftInfo)
         // const{name, value}= evt.target;
 
@@ -41,8 +43,8 @@ export default function NewGiftForm({user}) {
       // will resolve to the user object included in the
       // payload of the JSON Web Token (JWT)
       const gift = await giftsAPI.addGift(giftInfo);
-      setGiftInfo(gift);
-    //   console.log(giftInfo)
+      setGifts(gift);
+      console.log(`handle submit giftinfo: ${setGifts}`)
     } catch {
       setError('Try adding gift again');
     }
@@ -54,15 +56,15 @@ export default function NewGiftForm({user}) {
         <form autoComplete="off" onSubmit={handleSubmit}>
             <label>Recipient Name</label>
             <input type="text" name="name" value={giftInfo.name} onChange={handleChange} required/>
-            <label>Relation Type</label>
+            {/* <label>Relation Type</label>
             <select type="text" name="relationType" value={giftInfo.relationType} onChange={handleChange} required>
-                {/* <option style="display:none"></option> */}
+                <option style="display:none"></option>
                 <option value="Family">Family</option>
                 <option value="Friend">Friend</option>
                 <option value="Partner">Partner</option>
                 <option value="Co-worker">Co-worker</option>
                 <option value="Other">Other</option>
-            </select>
+            </select> */}
             <label>Gift Item</label>
             <input type="text" name="item" value={giftInfo.item} onChange={handleChange} required/>
             <label>Description</label>
