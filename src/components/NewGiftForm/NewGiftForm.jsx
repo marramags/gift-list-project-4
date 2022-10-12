@@ -39,10 +39,14 @@ export default function NewGiftForm({user, setGifts}) {
     }
   }
 
-  
+
 
     return (
         <div>
+        <ul>
+        
+        </ul>
+
         <h2>Add a Gift!</h2>
         <form autoComplete="off" onSubmit={handleSubmit}>
             <label>Recipient Name</label>
