@@ -8,7 +8,11 @@ export function addGift(userData) {
 }
 
 //retrieve gift list
-export function getList() {
+// export function getList() {
+//     return sendRequest(BASE_URL);
+// }
+
+//retrieve gift list
+export function getAll() {
     return sendRequest(BASE_URL);
 }
-
