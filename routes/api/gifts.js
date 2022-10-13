@@ -9,4 +9,7 @@ router.get('/', giftsCtrl.getAll)
 //POST http://localhost:3001/api/giftlist/
 router.post('/', giftsCtrl.addGift);
 
+//DELETE
+router.delete('/:id', giftsCtrl.deleteOne)
+
 module.exports = router;
