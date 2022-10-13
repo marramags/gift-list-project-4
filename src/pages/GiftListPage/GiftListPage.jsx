@@ -9,13 +9,22 @@ import { useNavigate } from "react-router-dom";
 export default function GiftListPage({gifts, user, setGifts}) {
 
     const [giftList, setGiftList] = useState([])
+  //   const [formData, setFormData] = useState("");
+  // const [checked, setChecked] = useState([]);
+  // const [categories, setCategories] = useState([
+  //   { _id: "5d7c7653427efd4400201e0e", name: "JavaScript", slug: "javascript" },
+  //   { _id: "5d7c7662427efd4400201e11", name: "VueJs", slug: "vuejs" },
+  //   { _id: "5d7c79df427efd4400201e1e", name: "Firebase", slug: "firebase" }
+  // ]);
     const navigate = useNavigate();
+    // const [giftData, setGiftData] = useState("");
+    // const [checkedGift, setCheckedGift] = useState([]);
+    // const [giftCategories, setGiftCategories] = useState([])
 
     useEffect(function() {
         async function getList() {
           const allGifts = await giftsAPI.getAll();
           setGiftList(allGifts);
-          // console.log(allGifts)
           // console.log(allGifts[11].name)
           // console.log(allGifts[11].relationType)
           // console.log(allGifts[11].giftItems)
@@ -66,6 +75,65 @@ export default function GiftListPage({gifts, user, setGifts}) {
       window.location.reload();
     };
   
+//     useEffect(() => {
+//       setGiftData(new giftData());
+//     }, []);    
+    
+//     const handleToggle = c => () => {
+//       const clickedCategory = checked.indexOf(c);
+//       const all = [...checked];
+
+//       if (clickedCategory === -1) {
+//         all.push(c);
+//       } else {
+//         all.splice(clickedCategory, 1);
+//       }
+//       console.log(all);
+//       setCheckedGift(all);
+//       formData.set('categories', all);
+//     }
+
+//     const showCategories = () => {
+//       return giftList.map((c, i) => (
+//         <li key={i} className="list-unstyled">
+//           <input
+//           onChange={handleToggle(c._id)}
+//           type='checkbox'
+//           className='mr-2'
+//           />
+//  <label className="form-check-label">{c.name}</label>
+//         </li>
+//       ))
+//     }
+    
+    //testing
+//     const handleToggle = c => () => {
+//       const clickedCategory = checked.indexOf(c);
+//       const all = [...checked];
+
+//       if (clickedCategory === -1) {
+//         all.push(c);
+//       } else {
+//         all.splice(clickedCategory, 1);
+//       }
+//       console.log(all);
+//       setChecked(all);
+//       formData.set('categories', all);
+//     }
+
+//     const showCategories = () => {
+//       return categories.map((c, i) => (
+//         <li key={i} className="list-unstyled">
+//           <input
+//           onChange={handleToggle(c._id)}
+//           type='checkbox'
+//           className='mr-2'
+//           />
+//  <label className="form-check-label">{c.name}</label>
+//         </li>
+//       ))
+//     }
+
 
     return(
         <>
@@ -73,10 +141,20 @@ export default function GiftListPage({gifts, user, setGifts}) {
         {/* {giftItemList} */}
         <ul>
         {giftList.map(function(gift, index) {
-        return <h2>{gift.name} {gift.relationType} 
+        return <h2>{gift.name} {gift.relationType} {gift.complete}
         {/* {gift.giftItems[0].item} */}
         {/* {{gift.giftItems} {index[0]}} */}
         &nbsp; 
+        {/* <button 
+                onClick={()=>{handleDelete(item.text)}}
+                ><h3>{item.completed ? "❌" : "✔️"}</h3></button> */}
+        &nbsp;
+        {/* {showCategories()} */}
+        <button onClick={'/'}>Edit</button>
+        &nbsp;
+        {/* <button 
+                onClick={()=>{handleDelete(item.text)}}
+                ><h3>{item.completed ? "❌" : "✔️"}</h3></button> */}
         <button onClick={()=>handleDelete(gift._id)}>delete</button></h2>
       })}
 
@@ -84,7 +162,11 @@ export default function GiftListPage({gifts, user, setGifts}) {
         </ul>
         {/* {giftItemList} */}
         <NewGiftForm user={user} setGifts={setGifts} />
-
+      
+        {/* <h2>Categories</h2>
+      {showCategories()}
+      <h2>Form Data</h2>
+      {JSON.stringify(...formData)} */}
         </>
     )
 }

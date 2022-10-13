@@ -1,6 +1,7 @@
 import { useState } from "react";
 // import * as usersService from '../../utilities/users-service';
 import * as giftsAPI from '../../utilities/gifts-api';
+import { useNavigate } from "react-router-dom";
 
 export default function NewGiftForm({user, setGifts}) {
 
@@ -10,12 +11,14 @@ export default function NewGiftForm({user, setGifts}) {
         name: '',
         relationType: '',
         item:'',
+        // complete:'',
         // description:'',
         // storeLink:'',
         // bought:''
     })
 
     const [error, setError] = useState('');
+    const navigate = useNavigate();
 
 
     function handleChange(evt) {
@@ -33,6 +36,9 @@ export default function NewGiftForm({user, setGifts}) {
       const gift = await giftsAPI.addGift(giftInfo);
       setGifts(gift);
       evt.target.reset();
+      navigate('/giftlist')
+
+    //   window.location.reload();
       console.log(`handle submit giftinfo: ${gift}`)
     } catch {
       setError('Try adding gift again');

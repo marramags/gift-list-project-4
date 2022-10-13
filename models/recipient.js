@@ -37,6 +37,10 @@ const recipientSchema = new Schema ({
         enum: ['Family', 'Friend', 'Partner', 'Co-worker', 'Other'],
         // required:true
     }, 
+    // complete: {
+    //     type: Boolean,
+    //     default: false,
+    // },
     giftItems: [giftItemSchema]
 },{
     timestamps: true
