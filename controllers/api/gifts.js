@@ -63,8 +63,9 @@ async function getAll(req, res) {
      // console.log(`_id: ${req.params.id}`)
     // await Recipient.findByIdAndDelete({_id: req.params.id, user: req.user._id})
     res.json(deleteGift)
+}
 
-  }
+
 
 module.exports = {
     addGift,
