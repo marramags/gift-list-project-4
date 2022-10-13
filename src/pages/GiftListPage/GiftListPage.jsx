@@ -44,19 +44,26 @@ export default function GiftListPage({gifts, user, setGifts}) {
     //   )});
     // console.log(`GL Page: ${giftItemList}`)
 
+    // async function handleDelete(id) {
+    //   // const filteredGifts = giftList.filter(g => g.name !== toDelete);
+    //   // setGiftList(filteredGifts);
+    //   // try{
+    //     // deleteGift(id);
+    //     await giftsAPI.deleteGift(id)
+    //     const filteredGifts = giftList.filter( (g) => g._id !== id);
+    //     console.log(filteredGifts)
+    //     setGiftList(filteredGifts);
+    //     navigate('/giftlist')
+    // //   } catch {
+    // //     console.log('try again')
+    // //   }
+    // };
+
     async function handleDelete(id) {
-      // const filteredGifts = giftList.filter(g => g.name !== toDelete);
-      // setGiftList(filteredGifts);
-      // try{
-        // deleteGift(id);
-        await giftsAPI.deleteGift(id)
-        const filteredGifts = giftList.filter( (g) => g._id !== id);
-        console.log(filteredGifts)
-        setGiftList(filteredGifts);
-        navigate('/giftlist')
-    //   } catch {
-    //     console.log('try again')
-    //   }
+      const deletingGift = await giftsAPI.deleteGift(id);
+      console.log(`delete: ${deletingGift}`)
+      navigate('/giftlist')
+      window.location.reload();
     };
   
 
@@ -70,7 +77,7 @@ export default function GiftListPage({gifts, user, setGifts}) {
         {/* {gift.giftItems[0].item} */}
         {/* {{gift.giftItems} {index[0]}} */}
         &nbsp; 
-        <button onClick={()=>handleDelete(giftList._id)}>delete</button></h2>
+        <button onClick={()=>handleDelete(gift._id)}>delete</button></h2>
       })}
 
 
