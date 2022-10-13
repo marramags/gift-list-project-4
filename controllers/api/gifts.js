@@ -14,7 +14,7 @@ async function addGift(req, res) { //create recipient and gift
         //    bought: req.body.bought
         });
     
-    console.log(`this is the req.body: ${req.body.item}`)
+    console.log(`this is the req.body for item: ${req.body.item}`)
 
     giftList.save()
     res.json(giftList)
@@ -35,12 +35,32 @@ async function addGift(req, res) { //create recipient and gift
 }
 
 async function getAll(req, res) {
-    const yourownvariable = await Recipient.find({})
-    res.json(yourownvariable)
-  
+    const getGiftList = await Recipient.find({})
+    res.json(getGiftList)
+    // console.log(`GET ALL${getGiftList}`)
+  }
+
+  async function deleteOne(req,res) {
+    // try{
+    // const giftList = await Recipient.findByIdAndDelete(req.body)
+    // console.log(req.body)
+    // res.json(giftList)
+    // }
+    // catch(error){
+    //     res.status(400).json(error);
+    //     console.log('Try deleting again')
+    // }
+    console.log(`user: ${req.user._id}`)
+    console.log(`_id: ${req.params.id}`)
+    await Recipient.findByIdAndDelete({user: req.user._id})
+    // await Recipient.findByIdAndDelete({_id: req.params.id, user: req.user._id})
+
+    res.json('delete')
+
   }
 
 module.exports = {
     addGift,
     getAll,
+    deleteOne,
 }

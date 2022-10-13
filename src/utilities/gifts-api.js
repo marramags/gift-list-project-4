@@ -16,3 +16,7 @@ export function addGift(userData) {
 export function getAll() {
     return sendRequest(BASE_URL);
 }
+
+export function deleteGift(id){
+    return sendRequest(`${BASE_URL}/${id}`, 'DELETE');
+}
