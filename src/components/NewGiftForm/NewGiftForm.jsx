@@ -11,6 +11,7 @@ export default function NewGiftForm({user, setGifts}) {
         name: '',
         relationType: '',
         item:'',
+        // complete:'',
         // description:'',
         // storeLink:'',
         // bought:''

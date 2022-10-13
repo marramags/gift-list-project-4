@@ -9,17 +9,17 @@ import { useNavigate } from "react-router-dom";
 export default function GiftListPage({gifts, user, setGifts}) {
 
     const [giftList, setGiftList] = useState([])
-    const [formData, setFormData] = useState("");
-  const [checked, setChecked] = useState([]);
-  const [categories, setCategories] = useState([
-    { _id: "5d7c7653427efd4400201e0e", name: "JavaScript", slug: "javascript" },
-    { _id: "5d7c7662427efd4400201e11", name: "VueJs", slug: "vuejs" },
-    { _id: "5d7c79df427efd4400201e1e", name: "Firebase", slug: "firebase" }
-  ]);
+  //   const [formData, setFormData] = useState("");
+  // const [checked, setChecked] = useState([]);
+  // const [categories, setCategories] = useState([
+  //   { _id: "5d7c7653427efd4400201e0e", name: "JavaScript", slug: "javascript" },
+  //   { _id: "5d7c7662427efd4400201e11", name: "VueJs", slug: "vuejs" },
+  //   { _id: "5d7c79df427efd4400201e1e", name: "Firebase", slug: "firebase" }
+  // ]);
     const navigate = useNavigate();
-    const [giftData, setGiftData] = useState("");
-    const [checkedGift, setCheckedGift] = useState([]);
-    const [giftCategories, setGiftCategories] = useState([])
+    // const [giftData, setGiftData] = useState("");
+    // const [checkedGift, setCheckedGift] = useState([]);
+    // const [giftCategories, setGiftCategories] = useState([])
 
     useEffect(function() {
         async function getList() {
@@ -141,7 +141,7 @@ export default function GiftListPage({gifts, user, setGifts}) {
         {/* {giftItemList} */}
         <ul>
         {giftList.map(function(gift, index) {
-        return <h2>{gift.name} {gift.relationType} 
+        return <h2>{gift.name} {gift.relationType} {gift.complete}
         {/* {gift.giftItems[0].item} */}
         {/* {{gift.giftItems} {index[0]}} */}
         &nbsp; 
