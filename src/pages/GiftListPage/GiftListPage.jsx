@@ -150,7 +150,12 @@ export default function GiftListPage({gifts, user, setGifts}) {
                 ><h3>{item.completed ? "❌" : "✔️"}</h3></button> */}
         &nbsp;
         {/* {showCategories()} */}
-        <button onClick={'/'}>Edit</button>
+        {/* <button onClick={'/'}>Edit</button> */}
+        &nbsp;
+        <div>
+        <label>Completed</label>
+        <input type="checkbox" onChange={'/'}></input>
+        </div>
         &nbsp;
         {/* <button 
                 onClick={()=>{handleDelete(item.text)}}
