@@ -152,6 +152,9 @@ export default function GiftListPage({gifts, user, setGifts}) {
         {/* {showCategories()} */}
         <button onClick={'/'}>Edit</button>
         &nbsp;
+        {/* <button 
+                onClick={()=>{handleDelete(item.text)}}
+                ><h3>{item.completed ? "❌" : "✔️"}</h3></button> */}
         <button onClick={()=>handleDelete(gift._id)}>delete</button></h2>
       })}
 
