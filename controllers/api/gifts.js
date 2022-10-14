@@ -67,7 +67,8 @@ async function getAll(req, res) {
 
 async function completeGifts(req, res){
     // const checkedGifts = await Recipient.findByIdAndUpdate(id);
-    const checkedGifts = await Recipient.findByIdAndUpdate(req.user.body);
+    // const checkedGifts = await Recipient.findByIdAndUpdate(req.user.body);
+    const checkedGifts = await Recipient.findOneAndUpdate(req.user.body);
 
     //assign checkedGifts is true
     // req..body.___ is true

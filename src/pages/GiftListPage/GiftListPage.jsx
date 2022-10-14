@@ -9,9 +9,10 @@ import { useNavigate } from "react-router-dom";
 export default function GiftListPage({gifts, user, setGifts}) {
 
     const [giftList, setGiftList] = useState([])
-    const [state,setState] = useState({
-      isChecked:false,
-    })
+    // const [state,setState] = useState({
+    //   isChecked:false,
+    // })
+    const [checked, setChecked] = useState(false)
   
     const navigate = useNavigate();
     // const [giftData, setGiftData] = useState("");
@@ -50,19 +51,23 @@ export default function GiftListPage({gifts, user, setGifts}) {
     //   )});
     // console.log(`GL Page: ${giftItemList}`)
 
-    async function handleChange (e, id, newStatus){
-      const completedGift = await giftsAPI.completeGifts(id, newStatus);
-      setGiftList(completedGift)
-      const value = e.target.type === "checkbox" ? e.target.checked : e.target.value
-      setState({
-        ...state,
-        [e.target.name]: value,
-      })
-      // console.log(`value: ${value}`)
+    //TEST1
+    // async function handleChange (e, id, newStatus){
+    //   const completedGift = await giftsAPI.completeGifts(id, newStatus);
+    //   setGiftList(completedGift)
+    //   const value = e.target.type === "checkbox" ? e.target.checked : e.target.value
+    //   setState({
+    //     ...state,
+    //     [e.target.name]: value,
+    //   })
+    //   // console.log(`value: ${value}`)
       
-    }
-    
-
+    // }
+console.log('checked', checked)
+    //TEST2
+   function handleChange (e){
+    setChecked({...checked, [e.target.name]: e.target.checked})
+   }
     // useEffect(function() {
       // async function handleCompleted(id) {
       //   const completedGift = await giftsAPI.completeGifts(id);
@@ -159,7 +164,7 @@ export default function GiftListPage({gifts, user, setGifts}) {
         <label>Completed</label>
         <input type="checkbox" 
                 onChange={handleChange}
-                checked={state.isChecked}
+                checked={checked}
                 name="isChecked"
                   // when clicked, it is true
                 // checkbox is true
