@@ -67,8 +67,12 @@ async function getAll(req, res) {
 
 async function completeGifts(req, res){
     // const checkedGifts = await Recipient.findByIdAndUpdate(id);
-    const checkedGifts = await Recipient.findByIdAndUpdate(req.user.body);
-
+    //how to find the recipient in the form (pass the user id)
+    //this has the id- the entire recipient
+    const checkedGifts = await Recipient.findById(req.params.id);
+    console.log( `checkedgifts: ${checkedGifts}`)
+    console.log(`req.body: ${req.body.complete}`)
+    // checkedGifts.complete = req.body.complete
     //assign checkedGifts is true
     // req..body.___ is true
     res.json(checkedGifts)

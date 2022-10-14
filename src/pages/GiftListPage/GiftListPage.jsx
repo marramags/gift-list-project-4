@@ -9,8 +9,9 @@ import { useNavigate } from "react-router-dom";
 export default function GiftListPage({gifts, user, setGifts}) {
 
     const [giftList, setGiftList] = useState([])
+
     const [state,setState] = useState({
-      isChecked:false,
+      complete:false,
     })
   
     const navigate = useNavigate();
@@ -51,13 +52,14 @@ export default function GiftListPage({gifts, user, setGifts}) {
     // console.log(`GL Page: ${giftItemList}`)
 
     async function handleChange (e, id, newStatus){
-      const completedGift = await giftsAPI.completeGifts(id, newStatus);
+      
       // setGiftList(completedGift)
       const value = e.target.type === "checkbox" ? e.target.checked : e.target.value
       setState({
         ...state,
         [e.target.name]: value,
       })
+      const completedGift = await giftsAPI.completeGifts(id, newStatus);
       // console.log(`value: ${value}`)
       
     }
@@ -85,41 +87,6 @@ export default function GiftListPage({gifts, user, setGifts}) {
     };
 
 
-  
-//     useEffect(() => {
-//       setGiftData(new giftData());
-//     }, []);    
-    
-//     const handleToggle = c => () => {
-//       const clickedCategory = checkedGift.indexOf(c);
-//       const all = [...checkedGift];
-
-//       if (clickedCategory === -1) {
-//         all.push(c);
-//       } else {
-//         all.splice(clickedCategory, 1);
-//       }
-//       console.log(all);
-//       setCheckedGift(all);
-//       giftData.set('giftcategories', all);
-//     }
-
-//     const showCategories = () => {
-//       return giftList.map((c, i) => (
-//         <li key={i} className="list-unstyled">
-//           <input
-//           onChange={handleToggle(c._id)}
-//           type='checkbox'
-//           className='mr-2'
-//           />
-//  <label className="form-check-label">{c.name}</label>
-//         </li>
-//       ))
-//     }
-    
-
-
-
     return(
         <>
         <h1>Gifting List</h1>
@@ -142,7 +109,7 @@ export default function GiftListPage({gifts, user, setGifts}) {
         <input type="checkbox" 
                 onChange={handleChange}
                 checked={state.isChecked}
-                name="isChecked"
+                name="complete"
                   // when clicked, it is true
                 // checkbox is true
                 // {gift.complete ? }
