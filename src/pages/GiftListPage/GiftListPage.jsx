@@ -9,13 +9,10 @@ import { useNavigate } from "react-router-dom";
 export default function GiftListPage({gifts, user, setGifts}) {
 
     const [giftList, setGiftList] = useState([])
-  //   const [formData, setFormData] = useState("");
-  // const [checked, setChecked] = useState([]);
-  // const [categories, setCategories] = useState([
-  //   { _id: "5d7c7653427efd4400201e0e", name: "JavaScript", slug: "javascript" },
-  //   { _id: "5d7c7662427efd4400201e11", name: "VueJs", slug: "vuejs" },
-  //   { _id: "5d7c79df427efd4400201e1e", name: "Firebase", slug: "firebase" }
-  // ]);
+    const [state,setState] = useState({
+      isChecked:false,
+    })
+  
     const navigate = useNavigate();
     // const [giftData, setGiftData] = useState("");
     // const [checkedGift, setCheckedGift] = useState([]);
@@ -53,20 +50,32 @@ export default function GiftListPage({gifts, user, setGifts}) {
     //   )});
     // console.log(`GL Page: ${giftItemList}`)
 
-    // async function handleDelete(id) {
-    //   // const filteredGifts = giftList.filter(g => g.name !== toDelete);
-    //   // setGiftList(filteredGifts);
-    //   // try{
-    //     // deleteGift(id);
-    //     await giftsAPI.deleteGift(id)
-    //     const filteredGifts = giftList.filter( (g) => g._id !== id);
-    //     console.log(filteredGifts)
-    //     setGiftList(filteredGifts);
-    //     navigate('/giftlist')
-    // //   } catch {
-    // //     console.log('try again')
-    // //   }
-    // };
+    async function handleChange (e, id, newStatus){
+      const completedGift = await giftsAPI.completeGifts(id, newStatus);
+      setGiftList(completedGift)
+      const value = e.target.type === "checkbox" ? e.target.checked : e.target.value
+      setState({
+        ...state,
+        [e.target.name]: value,
+      })
+      // console.log(`value: ${value}`)
+      
+    }
+    
+
+    // useEffect(function() {
+      // async function handleCompleted(id) {
+      //   const completedGift = await giftsAPI.completeGifts(id);
+
+      //   setGiftList(completedGift);
+      //   console.log(completedGift)
+      // }
+      // updateList();
+    // }, [])
+
+      // console.log(allGifts[11].name)
+        // console.log(allGifts[11].relationType)
+        // console.log(allGifts[11].giftItems)
 
     async function handleDelete(id) {
       const deletingGift = await giftsAPI.deleteGift(id);
@@ -74,14 +83,16 @@ export default function GiftListPage({gifts, user, setGifts}) {
       navigate('/giftlist')
       window.location.reload();
     };
+
+
   
 //     useEffect(() => {
 //       setGiftData(new giftData());
 //     }, []);    
     
 //     const handleToggle = c => () => {
-//       const clickedCategory = checked.indexOf(c);
-//       const all = [...checked];
+//       const clickedCategory = checkedGift.indexOf(c);
+//       const all = [...checkedGift];
 
 //       if (clickedCategory === -1) {
 //         all.push(c);
@@ -90,7 +101,7 @@ export default function GiftListPage({gifts, user, setGifts}) {
 //       }
 //       console.log(all);
 //       setCheckedGift(all);
-//       formData.set('categories', all);
+//       giftData.set('giftcategories', all);
 //     }
 
 //     const showCategories = () => {
@@ -106,6 +117,57 @@ export default function GiftListPage({gifts, user, setGifts}) {
 //       ))
 //     }
     
+
+
+
+    return(
+        <>
+        <h1>Gifting List</h1>
+        {/* {giftItemList} */}
+        <ul>
+        {giftList.map(function(gift, index) {
+        return <h2>{gift.name} {gift.relationType} {gift.complete}
+        {/* {gift.giftItems[0].item} */}
+        {/* {{gift.giftItems} {index[0]}} */}
+        &nbsp; 
+        {/* <button 
+                onClick={()=>{handleDelete(item.text)}}
+                ><h3>{item.completed ? "❌" : "✔️"}</h3></button> */}
+        &nbsp;
+        {/* {showCategories()} */}
+        {/* <button onClick={'/'}>Edit</button> */}
+        &nbsp;
+        <div>
+        <label>Completed</label>
+        <input type="checkbox" 
+                onChange={handleChange}
+                checked={state.isChecked}
+                name="isChecked"
+                  // when clicked, it is true
+                // checkbox is true
+                // {gift.complete ? }
+                />
+        </div>
+        &nbsp;
+        {/* <button 
+                onClick={()=>{handleDelete(item.text)}}
+                ><h3>{item.completed ? "❌" : "✔️"}</h3></button> */}
+        <button onClick={()=>handleDelete(gift._id)}>delete</button></h2>
+      })}
+
+
+        </ul>
+        {/* {giftItemList} */}
+        <NewGiftForm user={user} setGifts={setGifts} />
+      
+        {/* <h2>Categories</h2>
+      {showCategories()}
+      <h2>Form Data</h2>
+      {JSON.stringify(...formData)} */}
+        </>
+    )
+}
+
     //testing
 //     const handleToggle = c => () => {
 //       const clickedCategory = checked.indexOf(c);
@@ -133,45 +195,3 @@ export default function GiftListPage({gifts, user, setGifts}) {
 //         </li>
 //       ))
 //     }
-
-
-    return(
-        <>
-        <h1>Gifting List</h1>
-        {/* {giftItemList} */}
-        <ul>
-        {giftList.map(function(gift, index) {
-        return <h2>{gift.name} {gift.relationType} {gift.complete}
-        {/* {gift.giftItems[0].item} */}
-        {/* {{gift.giftItems} {index[0]}} */}
-        &nbsp; 
-        {/* <button 
-                onClick={()=>{handleDelete(item.text)}}
-                ><h3>{item.completed ? "❌" : "✔️"}</h3></button> */}
-        &nbsp;
-        {/* {showCategories()} */}
-        {/* <button onClick={'/'}>Edit</button> */}
-        &nbsp;
-        <div>
-        <label>Completed</label>
-        <input type="checkbox" onChange={'/'}></input>
-        </div>
-        &nbsp;
-        {/* <button 
-                onClick={()=>{handleDelete(item.text)}}
-                ><h3>{item.completed ? "❌" : "✔️"}</h3></button> */}
-        <button onClick={()=>handleDelete(gift._id)}>delete</button></h2>
-      })}
-
-
-        </ul>
-        {/* {giftItemList} */}
-        <NewGiftForm user={user} setGifts={setGifts} />
-      
-        {/* <h2>Categories</h2>
-      {showCategories()}
-      <h2>Form Data</h2>
-      {JSON.stringify(...formData)} */}
-        </>
-    )
-}

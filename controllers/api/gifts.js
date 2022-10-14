@@ -65,10 +65,20 @@ async function getAll(req, res) {
     res.json(deleteGift)
 }
 
+async function completeGifts(req, res){
+    // const checkedGifts = await Recipient.findByIdAndUpdate(id);
+    const checkedGifts = await Recipient.findByIdAndUpdate(req.user.body);
+
+    //assign checkedGifts is true
+    // req..body.___ is true
+    res.json(checkedGifts)
+}
+
 
 
 module.exports = {
     addGift,
     getAll,
     deleteOne,
+    completeGifts,
 }

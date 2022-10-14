@@ -20,3 +20,7 @@ export function getAll() {
 export function deleteGift(id){
     return sendRequest(`${BASE_URL}/${id}`, 'DELETE');
 }
+
+export function completeGifts(id, newStatus) {
+    return sendRequest(`${BASE_URL}/${id}`, 'PUT', {id, newStatus});
+}
