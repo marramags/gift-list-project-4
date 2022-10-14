@@ -51,7 +51,11 @@ export default function GiftListPage({gifts, user, setGifts}) {
     //   )});
     // console.log(`GL Page: ${giftItemList}`)
 
-    async function handleChange (e, id, newStatus){
+
+    // console.log(user._id)
+    const realId = user._id
+
+    async function handleChange (e, realId, newStatus){
       
       // setGiftList(completedGift)
       const value = e.target.type === "checkbox" ? e.target.checked : e.target.value
@@ -59,7 +63,8 @@ export default function GiftListPage({gifts, user, setGifts}) {
         ...state,
         [e.target.name]: value,
       })
-      const completedGift = await giftsAPI.completeGifts(id, newStatus);
+      
+      const completedGift = await giftsAPI.completeGifts(realId, newStatus);
       // console.log(`value: ${value}`)
       
     }
@@ -107,8 +112,9 @@ export default function GiftListPage({gifts, user, setGifts}) {
         <div>
         <label>Completed</label>
         <input type="checkbox" 
-                onChange={handleChange}
-                checked={state.isChecked}
+                onChange={(e) => handleChange(e, realId)}
+                // onChange={handleChange()}
+                checked={state.complete}
                 name="complete"
                   // when clicked, it is true
                 // checkbox is true

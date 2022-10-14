@@ -58,7 +58,7 @@ async function getAll(req, res) {
 
     // await Recipient.findByIdAndDelete({user: req.user._id})
     // console.log(`_id: ${req.params.id}`)
-    console.log(`req.body: ${req.body}`)
+    // console.log(`req.body: ${req.params.id}`)
     // console.log(`delete: ${deleteGift}`)
      // console.log(`_id: ${req.params.id}`)
     // await Recipient.findByIdAndDelete({_id: req.params.id, user: req.user._id})

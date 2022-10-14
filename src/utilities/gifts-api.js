@@ -18,9 +18,12 @@ export function getAll() {
 }
 
 export function deleteGift(id){
+    console.log(id)
     return sendRequest(`${BASE_URL}/${id}`, 'DELETE');
 }
 
 export function completeGifts(id, newStatus) {
+    console.log(`user id:${id}`)
+    console.log(newStatus)
     return sendRequest(`${BASE_URL}/${id}`, 'PUT', newStatus);
 }
