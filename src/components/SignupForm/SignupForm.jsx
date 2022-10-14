@@ -2,7 +2,9 @@ import { Component } from "react";
 import { signUp } from '../../utilities/users-service';
 
 
+
 export default class SignupForm extends Component{
+    
     state = {
         name: '',
         username:'',
@@ -12,7 +14,9 @@ export default class SignupForm extends Component{
         error: ''
       };
 
-      handleChange = (evt) => {
+
+
+    handleChange = (evt) => {
         this.setState({
             [evt.target.name]:evt.target.value,
             error:''
@@ -28,7 +32,8 @@ export default class SignupForm extends Component{
             delete formData.error;
             const user = await signUp(formData);
             this.proper.setUser(user);
-            } catch {
+            window.location.reload();
+        } catch {
                 this.setState({error: 'Sign Up Failed - Try Again'});
             }
         }

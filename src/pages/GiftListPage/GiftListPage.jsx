@@ -30,7 +30,7 @@ export default function GiftListPage({gifts, user, setGifts}) {
       }, [])
 
 
-      console.log(giftList)
+      // console.log(giftList)
       // console.log(giftList[0].name)
       // console.log(giftList[0].relationType)
       // console.log(giftList[0].giftItems)
@@ -116,9 +116,26 @@ export default function GiftListPage({gifts, user, setGifts}) {
 //         </li>
 //       ))
 //     }
+
+  // console.log(giftList)
+    // const testArr=[]
+    // const testing = giftList.map(function(g){
+    //   giftList.giftItems.map(function(gift){
+    //     testArr.push(gift.item)
+    //     console.log(testArr)
+    //   })
+    // })
+
+    //   giftList.forEach((gift) => {
+    //   giftList.giftItems((g) => {
+    //     testArr.push(g)
+    //     console.log(g)
+    //   })
+    // })
     
 
-
+    // // console.log(testing)
+    // console.log(testArr)
 
     return(
         <>
