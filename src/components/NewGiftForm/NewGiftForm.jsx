@@ -16,7 +16,6 @@ export default function NewGiftForm({user, setGifts}) {
         // storeLink:'',
         // bought:''
     })
-    const [giftText, setGiftText] = useState('');
 
     const [error, setError] = useState('');
     const navigate = useNavigate();
