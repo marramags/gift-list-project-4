@@ -20,6 +20,7 @@ export default function NewGiftForm({user, setGifts}) {
 
     const [error, setError] = useState('');
     const navigate = useNavigate();
+    const [giftText, setGiftText] = useState('');
 
 
     function handleChange(evt) {
