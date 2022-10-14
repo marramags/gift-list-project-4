@@ -30,7 +30,7 @@ export default function GiftListPage({gifts, user, setGifts}) {
       }, [])
 
 
-      // console.log(giftList)
+      console.log(giftList)
       // console.log(giftList[0].name)
       // console.log(giftList[0].relationType)
       // console.log(giftList[0].giftItems)
@@ -127,6 +127,7 @@ export default function GiftListPage({gifts, user, setGifts}) {
         <ul>
         {giftList.map(function(gift, index) {
         return <h2>{gift.name} {gift.relationType} {gift.complete}
+
         {/* {gift.giftItems[0].item} */}
         {/* {{gift.giftItems} {index[0]}} */}
         &nbsp; 
@@ -168,30 +169,3 @@ export default function GiftListPage({gifts, user, setGifts}) {
     )
 }
 
-    //testing
-//     const handleToggle = c => () => {
-//       const clickedCategory = checked.indexOf(c);
-//       const all = [...checked];
-
-//       if (clickedCategory === -1) {
-//         all.push(c);
-//       } else {
-//         all.splice(clickedCategory, 1);
-//       }
-//       console.log(all);
-//       setChecked(all);
-//       formData.set('categories', all);
-//     }
-
-//     const showCategories = () => {
-//       return categories.map((c, i) => (
-//         <li key={i} className="list-unstyled">
-//           <input
-//           onChange={handleToggle(c._id)}
-//           type='checkbox'
-//           className='mr-2'
-//           />
-//  <label className="form-check-label">{c.name}</label>
-//         </li>
-//       ))
-//     }
