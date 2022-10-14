@@ -25,5 +25,6 @@ export function deleteGift(id){
 export function completeGifts(id, newStatus) {
     console.log(`user id:${id}`)
     console.log(newStatus)
+    console.log(`state: ${newStatus}`)
     return sendRequest(`${BASE_URL}/${id}`, 'PUT', newStatus);
 }
