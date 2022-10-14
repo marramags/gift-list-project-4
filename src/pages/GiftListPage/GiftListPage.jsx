@@ -95,10 +95,13 @@ export default function GiftListPage({gifts, user, setGifts}) {
         {/* {showCategories()} */}
         {/* <button onClick={'/'}>Edit</button> */}
         &nbsp;
+
         <div>
+          
         <label>Completed</label>
         <input type="checkbox" 
                 onChange={(e) => handleChange(e, gift._id)}
+                //if statement if user is this then do this
                 // onChange={handleChange()}
                 checked={state.complete}
                 name="complete"
