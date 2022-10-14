@@ -52,7 +52,7 @@ export default function GiftListPage({gifts, user, setGifts}) {
 
     async function handleChange (e, id, newStatus){
       const completedGift = await giftsAPI.completeGifts(id, newStatus);
-      setGiftList(completedGift)
+      // setGiftList(completedGift)
       const value = e.target.type === "checkbox" ? e.target.checked : e.target.value
       setState({
         ...state,
