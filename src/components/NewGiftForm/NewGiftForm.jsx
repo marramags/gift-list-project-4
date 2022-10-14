@@ -36,7 +36,7 @@ export default function NewGiftForm({user, setGifts}) {
       // The promise returned by the signUp service method 
       // will resolve to the user object included in the
       // payload of the JSON Web Token (JWT)
-      const gift = await giftsAPI.addGift(giftInfo);
+      const gift = await giftsAPI.addGift(giftInfo); //create
       setGifts(gift);
       evt.target.reset();
       navigate('/giftlist')

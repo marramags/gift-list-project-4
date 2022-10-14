@@ -10,9 +10,7 @@ export default function GiftListPage({gifts, user, setGifts}) {
 
     const [giftList, setGiftList] = useState([])
 
-    const [state,setState] = useState({
-      complete:false,
-    })
+    const [state, setState] = useState({complete:false})
   
     const navigate = useNavigate();
     // const [giftData, setGiftData] = useState("");
@@ -36,7 +34,7 @@ export default function GiftListPage({gifts, user, setGifts}) {
       // console.log(giftList[0].name)
       // console.log(giftList[0].relationType)
       // console.log(giftList[0].giftItems)
-      // console.log(giftList[0].giftItems[0].item)
+      // console.log(giftList[1].giftItems[0].item)
       // let test1 =[];
       // giftList.forEach((p)=> {
       //   giftList.giftItems.forEach((g) => {
@@ -56,13 +54,17 @@ export default function GiftListPage({gifts, user, setGifts}) {
     // console.log(user._id)
     // const realId = user._id
 
-    async function handleChange (e, id){
+    async function handleChange (e, id, check){
       // setGiftList(completedGift)
-      const value = e.target.type === "checkbox" ? e.target.checked : e.target.value
-      setState({
-        ...state,
-        [e.target.name]: value,
-      })
+      // const value = e.target.type === "checkbox" ? e.target.checked : e.target.value
+      // setState({
+      //   ...state,
+      //   [e.target.name]: value,
+      // })
+      // console.log(e.target.)
+      check ? setState(false) : setState(true)
+      // setState(()=>{state.complete ? false : true})
+      // setState(!state.complete)
       const completedGift = await giftsAPI.completeGifts(id, state.complete);
       // console.log(`value: ${value}`)
       
@@ -85,7 +87,7 @@ export default function GiftListPage({gifts, user, setGifts}) {
         <ul>
         {giftList.map(function(gift, index) {
         return <h2>{gift.name} {gift.relationType} {gift.complete}
-        {/* {gift.giftItems[0].item} */}
+        {gift.giftItems[0].item}
         {/* {{gift.giftItems} {index[0]}} */}
         &nbsp; 
         {/* <button 
@@ -100,10 +102,11 @@ export default function GiftListPage({gifts, user, setGifts}) {
           
         <label>Completed</label>
         <input type="checkbox" 
-                onChange={(e) => handleChange(e, gift._id)}
+                onChange={(e) => handleChange(e, gift._id, gift.complete)}
                 //if statement if user is this then do this
                 // onChange={handleChange()}
-                checked={state.complete}
+                // change the 
+                  checked={state.complete}
                 name="complete"
                   // when clicked, it is true
                 // checkbox is true
