@@ -13,6 +13,6 @@ router.post('/', giftsCtrl.addGift);
 router.delete('/:id', giftsCtrl.deleteOne)
 
 //PUT
-router.delete('/:id', giftsCtrl.completeGifts)
+router.put('/:id', giftsCtrl.completeGifts)
 
 module.exports = router;

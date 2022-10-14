@@ -8,6 +8,7 @@ export default function NewGiftForm({user, setGifts}) {
     //endpoint to the database
 
     const [giftInfo, setGiftInfo] = useState({
+        user: user,
         name: '',
         relationType: '',
         item:'',
@@ -62,6 +63,7 @@ export default function NewGiftForm({user, setGifts}) {
             <label>Relation Type</label>
             <select type="text" name="relationType" value={giftInfo.relationType} onChange={handleChange} required>
                 {/* <option style="display:none"></option> */}
+                <option >Choose One</option>
                 <option value="Family">Family</option>
                 <option value="Friend">Friend</option>
                 <option value="Partner">Partner</option>

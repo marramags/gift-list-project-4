@@ -58,7 +58,7 @@ async function getAll(req, res) {
 
     // await Recipient.findByIdAndDelete({user: req.user._id})
     // console.log(`_id: ${req.params.id}`)
-    console.log(`req.body: ${req.body}`)
+    // console.log(`req.body: ${req.params.id}`)
     // console.log(`delete: ${deleteGift}`)
      // console.log(`_id: ${req.params.id}`)
     // await Recipient.findByIdAndDelete({_id: req.params.id, user: req.user._id})
@@ -67,10 +67,18 @@ async function getAll(req, res) {
 
 async function completeGifts(req, res){
     // const checkedGifts = await Recipient.findByIdAndUpdate(id);
-    const checkedGifts = await Recipient.findByIdAndUpdate(req.user.body);
+    //how to find the recipient in the form (pass the user id)
+    //this has the id- the entire recipient
+    const checkedGifts = await Recipient.findById(req.params.id);
+    checkedGifts.complete = req.complete
+    await checkedGifts.save()
+    console.log( `checkedgifts.complete: ${checkedGifts.complete}`)
 
+    console.log( `checkedgifts: ${req.complete}`)
+    console.log(`req.id: ${req.params.id}`)
     //assign checkedGifts is true
     // req..body.___ is true
+
     res.json(checkedGifts)
 }
 

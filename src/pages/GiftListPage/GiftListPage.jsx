@@ -9,8 +9,9 @@ import { useNavigate } from "react-router-dom";
 export default function GiftListPage({gifts, user, setGifts}) {
 
     const [giftList, setGiftList] = useState([])
+
     const [state,setState] = useState({
-      isChecked:false,
+      complete:false,
     })
   
     const navigate = useNavigate();
@@ -31,6 +32,7 @@ export default function GiftListPage({gifts, user, setGifts}) {
 
 
       // console.log(giftList)
+
       // console.log(giftList[0].name)
       // console.log(giftList[0].relationType)
       // console.log(giftList[0].giftItems)
@@ -50,74 +52,30 @@ export default function GiftListPage({gifts, user, setGifts}) {
     //   )});
     // console.log(`GL Page: ${giftItemList}`)
 
-    async function handleChange (e, id, newStatus){
-      const completedGift = await giftsAPI.completeGifts(id, newStatus);
-      setGiftList(completedGift)
+
+    // console.log(user._id)
+    // const realId = user._id
+
+    async function handleChange (e, id){
+      // setGiftList(completedGift)
       const value = e.target.type === "checkbox" ? e.target.checked : e.target.value
       setState({
         ...state,
         [e.target.name]: value,
       })
+      const completedGift = await giftsAPI.completeGifts(id, state.complete);
       // console.log(`value: ${value}`)
       
     }
     
 
-    // useEffect(function() {
-      // async function handleCompleted(id) {
-      //   const completedGift = await giftsAPI.completeGifts(id);
-
-      //   setGiftList(completedGift);
-      //   console.log(completedGift)
-      // }
-      // updateList();
-    // }, [])
-
-      // console.log(allGifts[11].name)
-        // console.log(allGifts[11].relationType)
-        // console.log(allGifts[11].giftItems)
-
+  
     async function handleDelete(id) {
       const deletingGift = await giftsAPI.deleteGift(id);
       console.log(`delete: ${deletingGift}`)
       navigate('/giftlist')
       window.location.reload();
     };
-
-
-  
-//     useEffect(() => {
-//       setGiftData(new giftData());
-//     }, []);    
-    
-//     const handleToggle = c => () => {
-//       const clickedCategory = checkedGift.indexOf(c);
-//       const all = [...checkedGift];
-
-//       if (clickedCategory === -1) {
-//         all.push(c);
-//       } else {
-//         all.splice(clickedCategory, 1);
-//       }
-//       console.log(all);
-//       setCheckedGift(all);
-//       giftData.set('giftcategories', all);
-//     }
-
-//     const showCategories = () => {
-//       return giftList.map((c, i) => (
-//         <li key={i} className="list-unstyled">
-//           <input
-//           onChange={handleToggle(c._id)}
-//           type='checkbox'
-//           className='mr-2'
-//           />
-//  <label className="form-check-label">{c.name}</label>
-//         </li>
-//       ))
-//     }
-    
-
 
 
     return(
@@ -137,12 +95,16 @@ export default function GiftListPage({gifts, user, setGifts}) {
         {/* {showCategories()} */}
         {/* <button onClick={'/'}>Edit</button> */}
         &nbsp;
+
         <div>
+          
         <label>Completed</label>
         <input type="checkbox" 
-                onChange={handleChange}
-                checked={state.isChecked}
-                name="isChecked"
+                onChange={(e) => handleChange(e, gift._id)}
+                //if statement if user is this then do this
+                // onChange={handleChange()}
+                checked={state.complete}
+                name="complete"
                   // when clicked, it is true
                 // checkbox is true
                 // {gift.complete ? }
