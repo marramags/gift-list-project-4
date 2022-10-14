@@ -85,7 +85,7 @@ export default function GiftListPage({gifts, user, setGifts}) {
         <ul>
         {giftList.map(function(gift, index) {
           // if ({user} && {user._id.} === (gift.user)){
-         { user._id ===gift.user ?   
+        //  { user._id ===gift.user ?   
         <h2>{gift.name} {gift.relationType} {gift.complete}
         {/* {gift.giftItems[0].item} */}
         {/* {{gift.giftItems} {index[0]}} */}
@@ -109,9 +109,9 @@ export default function GiftListPage({gifts, user, setGifts}) {
                 onClick={()=>{handleDelete(item.text)}}
                 ><h3>{item.completed ? "❌" : "✔️"}</h3></button> */}
         <button onClick={()=>handleDelete(gift._id)}>delete</button></h2>
-        :
-          'No gifts to show'
-        }
+        // :
+        //   'No gifts to show'
+        // }
       })}
 
 
