@@ -38,7 +38,7 @@ export default function NewGiftForm({user, setGifts}) {
       evt.target.reset();
       navigate('/giftlist')
 
-    //   window.location.reload();
+      window.location.reload();
       console.log(`handle submit giftinfo: ${gift}`)
     } catch {
       setError('Try adding gift again');

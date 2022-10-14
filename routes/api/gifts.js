@@ -12,4 +12,7 @@ router.post('/', giftsCtrl.addGift);
 //DELETE
 router.delete('/:id', giftsCtrl.deleteOne)
 
+//PUT
+router.delete('/:id', giftsCtrl.completeGifts)
+
 module.exports = router;
