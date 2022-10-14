@@ -84,18 +84,12 @@ export default function GiftListPage({gifts, user, setGifts}) {
         {/* {giftItemList} */}
         <ul>
         {giftList.map(function(gift, index) {
-        return <h2>{gift.name} {gift.relationType} {gift.complete}
+          // if ({user} && {user._id.} === (gift.user)){
+         { user._id ===gift.user ?   
+        <h2>{gift.name} {gift.relationType} {gift.complete}
         {/* {gift.giftItems[0].item} */}
         {/* {{gift.giftItems} {index[0]}} */}
         &nbsp; 
-        {/* <button 
-                onClick={()=>{handleDelete(item.text)}}
-                ><h3>{item.completed ? "❌" : "✔️"}</h3></button> */}
-        &nbsp;
-        {/* {showCategories()} */}
-        {/* <button onClick={'/'}>Edit</button> */}
-        &nbsp;
-
         <div>
           
         <label>Completed</label>
@@ -115,6 +109,9 @@ export default function GiftListPage({gifts, user, setGifts}) {
                 onClick={()=>{handleDelete(item.text)}}
                 ><h3>{item.completed ? "❌" : "✔️"}</h3></button> */}
         <button onClick={()=>handleDelete(gift._id)}>delete</button></h2>
+        :
+          'No gifts to show'
+        }
       })}
 
 
