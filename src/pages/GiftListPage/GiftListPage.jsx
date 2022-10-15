@@ -29,7 +29,7 @@ export default function GiftListPage({gifts, user, setGifts}) {
       }, [])
 
 
-      // console.log(giftList)
+      console.log(giftList)
 
       // console.log(giftList[0].name)
       // console.log(giftList[0].relationType)
@@ -93,6 +93,7 @@ export default function GiftListPage({gifts, user, setGifts}) {
           {gift.complete}<br/> 
         {gift.giftItems[0].item}<br/> 
         ${gift.giftItems[0].price}<br/> 
+        {gift.giftItems[0].storeLink}<br/> 
 
         {/* {{gift.giftItems} {index[0]}} */}
         

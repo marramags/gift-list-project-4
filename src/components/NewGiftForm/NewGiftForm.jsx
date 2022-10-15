@@ -14,7 +14,7 @@ export default function NewGiftForm({user, setGifts}) {
         item:'',
         price:'',
         // description:'',
-        // storeLink:'',
+        storeLink:'',
         // bought:''
     })
 
@@ -74,9 +74,9 @@ export default function NewGiftForm({user, setGifts}) {
             <input type="text" name="item" value={giftInfo.item} onChange={handleChange} required/>
             <label>Price</label>
             <textarea type="text" name="price" value={giftInfo.price} onChange={handleChange} />
-            {/* <label>Store/Link</label>
-            <input type="text" name="storeLink" value={giftInfo.storeLink} onChange={handleChange} required/>
-            <label>Bought?</label>
+            <label>Store/Link</label>
+            <input type="text" name="storeLink" value={giftInfo.storeLink} onChange={handleChange}/>
+            {/* <label>Bought?</label>
             <select type="text" name="bought" value={giftInfo.bought} onChange={handleChange} required>
                 <option style="display:none"></option>
                 <option value="false">No</option>
