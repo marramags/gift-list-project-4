@@ -9,6 +9,7 @@ async function addGift(req, res) { //create recipient and gift
     giftList.giftItems.push( 
         { 
            item: req.body.item,
+           price: req.body.price,
            description: req.body.description,
            storeLink: req.body.storeLink,
         //    bought: req.body.bought
