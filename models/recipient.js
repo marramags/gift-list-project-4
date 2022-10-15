@@ -12,10 +12,10 @@ const giftItemSchema = new Schema ({
         type: Number,
         // trim: true,
     },
-    // storeLink: {
-    //     type: String,
-    //     // trim: true,
-    // },
+    storeLink: {
+        type: String,
+        // trim: true,
+    },
     // bought:{
     //     type: Boolean,
     //     default: false,
