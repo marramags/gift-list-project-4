@@ -92,6 +92,8 @@ export default function GiftListPage({gifts, user, setGifts}) {
           {gift.relationType} <br/> 
           {gift.complete}<br/> 
         {gift.giftItems[0].item}<br/> 
+        ${gift.giftItems[0].price}<br/> 
+
         {/* {{gift.giftItems} {index[0]}} */}
         
   

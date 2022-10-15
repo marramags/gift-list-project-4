@@ -7,11 +7,11 @@ const giftItemSchema = new Schema ({
         // trim: true,
         // required:true
     }
-    // ,
-    // description: {
-    //     type: String,
-    //     // trim: true,
-    // },
+    ,
+    price: {
+        type: Number,
+        // trim: true,
+    },
     // storeLink: {
     //     type: String,
     //     // trim: true,
