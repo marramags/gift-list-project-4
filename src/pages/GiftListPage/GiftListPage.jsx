@@ -84,19 +84,17 @@ export default function GiftListPage({gifts, user, setGifts}) {
         <>
         <h1>Gifting List</h1>
         {/* {giftItemList} */}
-        <ul>
+        
         {giftList.map(function(gift, index) {
-        return <h2>{gift.name} {gift.relationType} {gift.complete}
-        {gift.giftItems[0].item}
+          if (user && (user._id === gift.user)) {
+        return <ul>
+          {gift.name} <br/> 
+          {gift.relationType} <br/> 
+          {gift.complete}<br/> 
+        {gift.giftItems[0].item}<br/> 
         {/* {{gift.giftItems} {index[0]}} */}
-        &nbsp; 
-        {/* <button 
-                onClick={()=>{handleDelete(item.text)}}
-                ><h3>{item.completed ? "❌" : "✔️"}</h3></button> */}
-        &nbsp;
-        {/* {showCategories()} */}
-        {/* <button onClick={'/'}>Edit</button> */}
-        &nbsp;
+        
+  
 
         <div>
           
@@ -113,15 +111,16 @@ export default function GiftListPage({gifts, user, setGifts}) {
                 // {gift.complete ? }
                 />
         </div>
-        &nbsp;
+       
         {/* <button 
                 onClick={()=>{handleDelete(item.text)}}
                 ><h3>{item.completed ? "❌" : "✔️"}</h3></button> */}
-        <button onClick={()=>handleDelete(gift._id)}>delete</button></h2>
+        <button onClick={()=>handleDelete(gift._id)}>delete</button></ul>
+        }
       })}
 
 
-        </ul>
+        
         {/* {giftItemList} */}
         <NewGiftForm user={user} setGifts={setGifts} />
       
