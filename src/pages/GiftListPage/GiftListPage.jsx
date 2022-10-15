@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import * as giftsAPI from '../../utilities/gifts-api';
 // import { deleteOne } from "../../../models/recipient";
 import { useNavigate } from "react-router-dom";
+import './GiftListPage.css'
 // import GiftItem from "../GiftItem/GiftItem";
 
 
@@ -83,25 +84,38 @@ export default function GiftListPage({gifts, user, setGifts}) {
     return(
         <>
         <h1>Gifting List</h1>
+        <NewGiftForm user={user} setGifts={setGifts} />
+      <hr></hr>
         {/* {giftItemList} */}
-        
+        <table>
+      <tr>
+      <th>Giftee</th>
+    <th>Relation</th>
+    <th>Gift Item</th>
+    <th>Price</th>
+    <th>Store</th>
+    <th>Bought?</th>
+    <th>Remove</th>
+
+      </tr>
+      
         {giftList.map(function(gift, index) {
           if (user && (user._id === gift.user)) {
-        return <ul>
-          {gift.name} <br/> 
-          {gift.relationType} <br/> 
-          {gift.complete}<br/> 
-        {gift.giftItems[0].item}<br/> 
-        ${gift.giftItems[0].price}<br/> 
-        {gift.giftItems[0].storeLink}<br/> 
-
+        return <tr>
+          <td>{gift.name}  </td>
+          <td>{gift.relationType} </td>
+          {/* <td> {gift.complete} </td> */}
+          <td>{gift.giftItems[0].item}</td>
+          <td> ${gift.giftItems[0].price} </td>
+          <td> <span className="storeLink">{gift.giftItems[0].storeLink}</span></td>
+        {/* </tr> */}
         {/* {{gift.giftItems} {index[0]}} */}
         
   
 
-        <div>
+        {/* <div> */}
           
-        <label>Completed</label>
+        <label></label>
         <input type="checkbox" 
                 onChange={(e) => handleChange(e, gift._id, gift.complete)}
                 //if statement if user is this then do this
@@ -113,52 +127,20 @@ export default function GiftListPage({gifts, user, setGifts}) {
                 // checkbox is true
                 // {gift.complete ? }
                 />
-        </div>
+        {/* </div> */}
        
         {/* <button 
                 onClick={()=>{handleDelete(item.text)}}
                 ><h3>{item.completed ? "❌" : "✔️"}</h3></button> */}
-        <button onClick={()=>handleDelete(gift._id)}>delete</button></ul>
+        <button onClick={()=>handleDelete(gift._id)}>x</button>
+        </tr>
         }
       })}
+    </table>
 
 
-        
-        {/* {giftItemList} */}
-        <NewGiftForm user={user} setGifts={setGifts} />
-      
-        {/* <h2>Categories</h2>
-      {showCategories()}
-      <h2>Form Data</h2>
-      {JSON.stringify(...formData)} */}
         </>
     )
 }
 
-    //testing
-//     const handleToggle = c => () => {
-//       const clickedCategory = checked.indexOf(c);
-//       const all = [...checked];
-
-//       if (clickedCategory === -1) {
-//         all.push(c);
-//       } else {
-//         all.splice(clickedCategory, 1);
-//       }
-//       console.log(all);
-//       setChecked(all);
-//       formData.set('categories', all);
-//     }
-
-//     const showCategories = () => {
-//       return categories.map((c, i) => (
-//         <li key={i} className="list-unstyled">
-//           <input
-//           onChange={handleToggle(c._id)}
-//           type='checkbox'
-//           className='mr-2'
-//           />
-//  <label className="form-check-label">{c.name}</label>
-//         </li>
-//       ))
-//     }
+  
