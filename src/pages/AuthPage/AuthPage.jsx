@@ -21,6 +21,7 @@ export default function AuthPage({setUser}) {
     return (
         <>
         {/* <NavBar/> */}
+        <section className='background-img'>
         <container className="signup-grid">
         {/* <div style={{ 
       backgroundImage: `url("https://images.unsplash.com/photo-1576072446580-32468f1b5439?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80")` ,
@@ -39,7 +40,7 @@ export default function AuthPage({setUser}) {
     
     }}> */}
               {/* <div style={myStyle}> */}
-        
+        {/* <div> */}
         <div className="authpage-info">     
         <h1 className="authpage-title">The Gifting List</h1>
         <div className='auth-page'>
@@ -51,6 +52,7 @@ export default function AuthPage({setUser}) {
         </div>
         {/* </div> */}
         </container>
+        </section>
         </>
     )
 }
