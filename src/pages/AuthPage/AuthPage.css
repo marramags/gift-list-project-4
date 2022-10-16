@@ -71,3 +71,10 @@ align-items: center;
     grid-row-start: row1-start;
     grid-row-end:1;
 }
+
+.authpage-title{
+  font-family: 'Damion', cursive;
+  font-size: 80px;
+  width:400px;
+
+}
