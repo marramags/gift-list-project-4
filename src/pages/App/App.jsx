@@ -7,6 +7,7 @@ import { useState } from 'react';
 import {Routes, Route} from 'react-router-dom';
 import NavBar from '../../components/NavBar/NavBar';
 import {getUser} from '../../utilities/users-service';
+import Homepage from '../Homepage/Homepage';
 
 function App() {
 
@@ -22,7 +23,9 @@ function App() {
 
   return (
     <div className="App">
-      <h1>The Gifting List</h1>
+      {/* <NavBar user={user} setUser={setUser}/> */}
+      {/* <h1>The Gifting List</h1> */}
+      {/* <Homepage/> */}
       
       { user ?
       // <GiftListPage />

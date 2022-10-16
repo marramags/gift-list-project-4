@@ -2,6 +2,7 @@ import { useState } from "react";
 // import * as usersService from '../../utilities/users-service';
 import * as giftsAPI from '../../utilities/gifts-api';
 import { useNavigate } from "react-router-dom";
+import './NewGiftForm.css'
 
 export default function NewGiftForm({user, setGifts}) {
 
@@ -56,32 +57,43 @@ export default function NewGiftForm({user, setGifts}) {
         
         </ul>
 
-        <h2>Add a Gift!</h2>
-        <form autoComplete="off" onSubmit={handleSubmit}>
-            <label>Recipient Name</label>
-            <input type="text" name="name" value={giftInfo.name} onChange={handleChange} required/>
-            <label>Relation Type</label>
-            <select type="text" name="relationType" value={giftInfo.relationType} onChange={handleChange} required>
+        {/* <h3>Add a Gift!</h3> */}
+        <form className="NewGiftForm" autoComplete="off" onSubmit={handleSubmit}>
+        <h3>Add a Gift!</h3>
+            <div>
+            {/* <label>Recipient Name</label> */}
+            <input type="text" name="name" value={giftInfo.name} placeholder="Name*" onChange={handleChange} required/>
+            </div>
+            <div>
+            {/* <label>Relation Type</label> */}
+            <select className="relationOptions" type="text" name="relationType" value={giftInfo.relationType} onChange={handleChange} required>
                 {/* <option style="display:none"></option> */}
-                <option >Choose One</option>
+                <option >Choose One*</option>
                 <option value="Family">Family</option>
                 <option value="Friend">Friend</option>
                 <option value="Partner">Partner</option>
                 <option value="Co-worker">Co-worker</option>
                 <option value="Other">Other</option>
-            </select>
-            <label>Gift Item</label>
-            <input type="text" name="item" value={giftInfo.item} onChange={handleChange} required/>
-            <label>Price</label>
-            <textarea type="text" name="price" value={giftInfo.price} onChange={handleChange} />
-            <label>Store/Link</label>
-            <input type="text" name="storeLink" value={giftInfo.storeLink} onChange={handleChange}/>
+            </select> 
+            </div>
+            <div>
+            {/* <label>Gift Item</label> */}
+            <input type="text" name="item" value={giftInfo.item} placeholder="Gift Item*" onChange={handleChange} required/>
+            </div>
+            <div>
+            {/* <label>Price</label> */}
+            <input type="text" name="price" value={giftInfo.price} placeholder="Price" onChange={handleChange} />
+            </div>
+            <div>
+            {/* <label>Store/Link</label> */}
+            <input type="text" name="storeLink" value={giftInfo.storeLink} placeholder="Store" onChange={handleChange}/>
             {/* <label>Bought?</label>
             <select type="text" name="bought" value={giftInfo.bought} onChange={handleChange} required>
                 <option style="display:none"></option>
                 <option value="false">No</option>
                 <option value="true">Yes</option>
             </select> */}
+            </div>
             <button type="submit">ADD GIFT</button>
         </form>
         <p className="error-message">&nbsp;{error}</p>
