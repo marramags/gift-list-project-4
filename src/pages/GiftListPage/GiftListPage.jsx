@@ -83,8 +83,10 @@ export default function GiftListPage({gifts, user, setGifts}) {
 
     return(
         <>
+        <section className="img">
         <h1>Gift List</h1>
         <NewGiftForm user={user} setGifts={setGifts} />
+        </section>
       <hr></hr>
         {/* {giftItemList} */}
         <table>
@@ -115,7 +117,7 @@ export default function GiftListPage({gifts, user, setGifts}) {
 
         {/* <div> */}
         <td>
-        <label>Complete</label>
+        <label></label>
         <input type="checkbox" 
                 onChange={(e) => handleChange(e, gift._id, gift.complete)}
                 //if statement if user is this then do this
