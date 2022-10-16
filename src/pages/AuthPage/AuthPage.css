@@ -1,10 +1,14 @@
 .signup-grid{
-  display: grid;
+
+  display: flex;
+  flex-direction:row;
   /* grid-template-rows: repeat(10, 1fr);
   grid-template-columns: repeat(10, 1fr); */
-  grid-template-rows: repeat(7, 1fr);
-  grid-template-columns: repeat(7, 1fr);
+  /* grid-template-rows: repeat(7, 1fr);
+  grid-template-columns: repeat(7, 1fr); */
   background-image: url("https://i.imgur.com/QGdj0IL.jpg");
+  align-items: center;
+  justify-content: center;
 
   /* background-image: 
 url(
@@ -26,6 +30,7 @@ background-repeat:no-repeat;
   display: flex;
 align-items: center;
 /* justify-content: center; */
+flex-direction: column;
 }
 
 .auth-page {
@@ -37,26 +42,31 @@ align-items: center;
     grid-column-end: 4;
     grid-row-start: row3-start;
     grid-row-end:4; */
-    grid-column-start: 1;
+    /* grid-column-start: 1;
     grid-column-end: 3;
     grid-row-start: row1-start;
-    grid-row-end:2;
+    grid-row-end:2; */
 }
 
 
 
 .authpage-info{
-    padding: 150px auto 0 auto;
-    margin: 100px auto 20px auto;
+    /* padding: 150px auto 0 auto; */
+    /* margin: 100px auto 20px auto; */
     /* grid-column-start: 3;
     grid-column-end: 5;
     grid-row-start: row1-start;
     grid-row-end:5; */
 
-    grid-column-start: 1;
-    grid-column-end: 5;
+    /* grid-column-start: 1;
+    grid-column-end: 5; */
     /* grid-row-start: row1-start; */
-    grid-row-end:4;
+    /* grid-row-end:4; */
+    width:800px;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: center;
+
     
 }
 
@@ -70,6 +80,7 @@ align-items: center;
     grid-column-end: 6;
     grid-row-start: row1-start;
     grid-row-end:1;
+    flex-direction: column;
 }
 
 .authpage-title{
