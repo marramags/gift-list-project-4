@@ -83,7 +83,7 @@ export default function GiftListPage({gifts, user, setGifts}) {
 
     return(
         <>
-        {/* <h1>Gifting List</h1> */}
+        <h1>Gift List</h1>
         <NewGiftForm user={user} setGifts={setGifts} />
       <hr></hr>
         {/* {giftItemList} */}

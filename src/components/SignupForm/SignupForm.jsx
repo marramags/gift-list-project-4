@@ -1,5 +1,8 @@
 import { Component } from "react";
 import { signUp } from '../../utilities/users-service';
+import './SignupForm.css'
+// import NavBar from "../NavBar/NavBar";
+// import {Routes, Route} from 'react-router-dom';
 
 
 export default class SignupForm extends Component{
@@ -38,9 +41,14 @@ export default class SignupForm extends Component{
         const disable = this.state.password !== this.state.confirm;
 
         return (
+            <section>
             <div>
+            
+            {/* <NavBar/> */}
+           
             <h1>Sign Up</h1>
             <div>
+                
                 <form autoComplete="off" onSubmit={this.handleSubmit}>
                     <label>Name</label>
                     <input type="text"
@@ -79,8 +87,11 @@ export default class SignupForm extends Component{
                     />
                     <button type="submit" disabled={disable}>Sign Up</button>
                 </form>
+               
             </div>
+            
             </div>
+            </section>
         )
     }
 }

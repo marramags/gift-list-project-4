@@ -26,7 +26,9 @@ function App() {
       {/* <NavBar user={user} setUser={setUser}/> */}
       {/* <h1>The Gifting List</h1> */}
       {/* <Homepage/> */}
-      
+      {/* <Routes>
+      <Route path = “/homepage“> <Homepage /> </Route>
+      </Routes> */}
       { user ?
       // <GiftListPage />
       <>
