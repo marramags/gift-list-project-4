@@ -39,7 +39,7 @@ export default function AuthPage({setUser}) {
     
     }}> */}
               {/* <div style={myStyle}> */}
-
+        
         <div className="authpage-info">     
         <h1 className="authpage-title">The Gifting List</h1>
         <div className='auth-page'>

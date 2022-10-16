@@ -1,23 +1,27 @@
 .signup-grid{
 
-  display: flex;
+  display: grid;
   flex-direction:row;
   /* grid-template-rows: repeat(10, 1fr);
   grid-template-columns: repeat(10, 1fr); */
-  /* grid-template-rows: repeat(7, 1fr);
-  grid-template-columns: repeat(7, 1fr); */
-  background-image: url("https://i.imgur.com/QGdj0IL.jpg");
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  background-color:dimgrey;
+  /* background-image: url("https://i.imgur.com/QGdj0IL.jpg");*/
   align-items: center;
-  justify-content: center;
+  justify-content: center; 
 
   /* background-image: 
 url(
 "https://media.geeksforgeeks.org/wp-content/uploads/rk.png"); */
 /* background-size: "cover"; */
-height: 100vh;
+max-height: 600px;
+width: 100%;
+max-width:800px;
 /* margin-top: -70px; */
 /* font-size:50px; */
 background-repeat:no-repeat; 
+margin: 0 auto;
 }
 
 container{
@@ -62,30 +66,35 @@ flex-direction: column;
     grid-column-end: 5; */
     /* grid-row-start: row1-start; */
     /* grid-row-end:4; */
-    width:800px;
+    /* width:800px; */
     /* flex-direction: column; */
     align-items: center;
     justify-content: center;
+    grid-column: 2/3;
+    grid-row:2/3;
+
 
     
 }
 
 .auth-forms{
+  grid-column: 3/4;
+  grid-row:2/3;
   /* grid-column-start: 5;
     grid-column-end: 8;
     grid-row-start: row1-start;
     grid-row-end:3; */
 
-    grid-column-start: 4;
+    /* grid-column-start: 4;
     grid-column-end: 6;
     grid-row-start: row1-start;
     grid-row-end:1;
-    flex-direction: column;
+    flex-direction: column; */
 }
 
 .authpage-title{
   font-family: 'Damion', cursive;
   font-size: 80px;
   width:400px;
-
+  
 }
