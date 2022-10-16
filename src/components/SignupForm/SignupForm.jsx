@@ -39,6 +39,7 @@ export default class SignupForm extends Component{
 
         return (
             <div>
+                <section>
             <h1>Sign Up</h1>
             <div>
                 <form autoComplete="off" onSubmit={this.handleSubmit}>
@@ -80,6 +81,7 @@ export default class SignupForm extends Component{
                     <button type="submit" disabled={disable}>Sign Up</button>
                 </form>
             </div>
+            </section>
             </div>
         )
     }
