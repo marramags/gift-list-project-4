@@ -22,6 +22,7 @@ function App() {
 
   return (
     <div className="App">
+      {/* <NavBar user={user} setUser={setUser}/> */}
       <h1>The Gifting List</h1>
       
       { user ?

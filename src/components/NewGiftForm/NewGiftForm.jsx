@@ -57,8 +57,9 @@ export default function NewGiftForm({user, setGifts}) {
         
         </ul>
 
-        <h2>Add a Gift!</h2>
+        {/* <h3>Add a Gift!</h3> */}
         <form className="NewGiftForm" autoComplete="off" onSubmit={handleSubmit}>
+        <h3>Add a Gift!</h3>
             <div>
             {/* <label>Recipient Name</label> */}
             <input type="text" name="name" value={giftInfo.name} placeholder="Name*" onChange={handleChange} required/>

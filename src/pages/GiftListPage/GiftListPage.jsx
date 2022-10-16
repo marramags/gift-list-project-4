@@ -83,7 +83,7 @@ export default function GiftListPage({gifts, user, setGifts}) {
 
     return(
         <>
-        <h1>Gifting List</h1>
+        {/* <h1>Gifting List</h1> */}
         <NewGiftForm user={user} setGifts={setGifts} />
       <hr></hr>
         {/* {giftItemList} */}
@@ -94,7 +94,7 @@ export default function GiftListPage({gifts, user, setGifts}) {
     <th>Gift Item</th>
     <th>Price</th>
     <th>Store</th>
-    <th>Bought?</th>
+    <th>Purchased?</th>
     <th>Remove</th>
 
       </tr>
@@ -114,8 +114,8 @@ export default function GiftListPage({gifts, user, setGifts}) {
   
 
         {/* <div> */}
-          
-        <label></label>
+        <td>
+        <label>Complete</label>
         <input type="checkbox" 
                 onChange={(e) => handleChange(e, gift._id, gift.complete)}
                 //if statement if user is this then do this
@@ -123,16 +123,18 @@ export default function GiftListPage({gifts, user, setGifts}) {
                 // change the 
                   checked={state.complete}
                 name="complete"
+                
                   // when clicked, it is true
                 // checkbox is true
                 // {gift.complete ? }
                 />
         {/* </div> */}
-       
+        </td>
         {/* <button 
                 onClick={()=>{handleDelete(item.text)}}
                 ><h3>{item.completed ? "❌" : "✔️"}</h3></button> */}
-        <button onClick={()=>handleDelete(gift._id)}>x</button>
+                <td>
+        <button onClick={()=>handleDelete(gift._id)}>x</button></td>
         </tr>
         }
       })}
