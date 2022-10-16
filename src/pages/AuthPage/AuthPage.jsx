@@ -21,8 +21,9 @@ export default function AuthPage({setUser}) {
     return (
         <>
         {/* <NavBar/> */}
-        <section className='background-img'>
-        <container className="signup-grid">
+        <container className='background-img'>
+        <section className="signup-grid" >
+        
         {/* <div style={{ 
       backgroundImage: `url("https://images.unsplash.com/photo-1576072446580-32468f1b5439?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80")` ,
     //   height:'100vh', backgroundSize: 'cover', backgroundRepeat: 'no-repeat', padding: 0, marginLeft: "auto",marginRight: "auto",
@@ -51,8 +52,9 @@ export default function AuthPage({setUser}) {
         {showLogin ? <LoginForm setUser={setUser}/> : <SignupForm setUser={setUser}/>}
         </div>
         {/* </div> */}
-        </container>
+       
         </section>
+        </container>
         </>
     )
 }
