@@ -94,7 +94,7 @@ export default function NewGiftForm({user, setGifts}) {
                 <option value="true">Yes</option>
             </select> */}
             </div>
-            <button type="submit">ADD GIFT</button>
+            <button className="new-gift-btn" type="submit">ADD GIFT</button>
         </form>
         <p className="error-message">&nbsp;{error}</p>
 

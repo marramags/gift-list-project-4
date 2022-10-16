@@ -7,12 +7,14 @@
     width: 400px;
     background-color: #43AAA7;
     padding: 20px;
-    border-radius: 10px;
-    outline:2px solid #F94849;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px grey;
+
+    /* outline:3px inset #b53636; */
 }
 
 .relationOptions {
-    width: 149px;
+    width: 170px;
     /* padding: 1px 2px; */
     /* border: 2px; */
 }
@@ -22,12 +24,21 @@ h3 {
     
 }
 input, select {
-    margin: 5px 0
+    margin: 5px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
     
 }
 
-button {
+.new-gift-btn {
     margin: 10px 0 0 0;
     border-radius: 5px;
-    border: none
+    border: none;
+    /* background-color:#b53636; */
+    background-color:#d33434;
+    
+    color: white;
+    font-size: 16px;
+    padding: 5px 10px;
 }

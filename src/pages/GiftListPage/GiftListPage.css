@@ -1,5 +1,15 @@
+.pagebody{
+    background-color: #e8e5e5;
+}
+
 table {
     margin: 0 auto;
+    /* border-top: 5px solid #d33434; */
+    /* padding: 10px 0 0 0; */
+    /* border: 5px solid black; */
+    box-shadow: 3px 3px 3px lightgray;
+    
+
 }
 
 tr{
@@ -12,15 +22,78 @@ tr{
 }
 
 th {
-    width: 200px;
+    width: 150px;
+    background-color: #43AAA7;
+    color: white;
 }
+
+.checkbox {
+    background-color: black;
+}
+
+.checkbox:checked::after{
+    background-color: #43AAA7;
+
+}
+
+.main input:checked ~ .checkbox {
+    background-color: green;
+}
+
+/* input {
+    position: absolute;
+    opacity: 0;
+    height: 0;
+    width: 0;
+  }
+
+  .main {
+    position: relative;
+    display: block;
+    padding-left: 30px;
+    cursor: pointer;
+  }
+  .main:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    margin-top: -10px;
+    left: 0;
+    display: block;
+    height: 20px;
+    width: 20px;
+    background-color: #50CDBE;
+    border-radius: 3px;
+  }
+
+  label:hover:before {
+    background-color: #1AE6E6;
+  }
+
+  .main:after {
+    content: '';
+    position: absolute;
+    left: 7px;
+    top: 1px;
+    width: 5px;
+    height: 10px;
+    border: solid #333;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+    opacity: 0;
+  }
+  
+  input:checked + .main:after {
+    opacity: 1;
+  } */
 
 h1{
     font-family: 'Damion', cursive;
-    font-size: 90px;
+    font-size: 64px;
   /* width:400px; */
   margin:0;
   opacity: 100% !important;
+  text-shadow: 2px 2px 5px white;
   /* background-color: #EFEFEF; */
 }
 
@@ -44,6 +117,7 @@ max-height: 100vh;
 /* background-size: 100%; */
 /* width: 100 */
 background-image: url("https://i.imgur.com/JmMqN5n.png");
+border-bottom: 5px solid #d33434;
 /* opacity: 0.5; */
 }
 
@@ -53,3 +127,8 @@ background-image: url("https://i.imgur.com/JmMqN5n.png");
     background-repeat:repeat;
     opacity: 0.5;
 } */
+
+hr{
+    color: #d33434;
+    /* size: 5px; */
+}
