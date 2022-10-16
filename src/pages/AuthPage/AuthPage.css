@@ -4,3 +4,9 @@
     width: 100px;
     margin: 0 auto;
 }
+
+signup-grid{
+    display: grid;
+    grid-template-rows: repeat(10, 1fr);
+    grid-template-columns: repeat(10, 1fr);
+}

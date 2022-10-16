@@ -39,8 +39,9 @@ export default class SignupForm extends Component{
 
         return (
             <div>
-                <section>
+                
             <h1>Sign Up</h1>
+            <section className="signup-grid">
             <div>
                 <form autoComplete="off" onSubmit={this.handleSubmit}>
                     <label>Name</label>
