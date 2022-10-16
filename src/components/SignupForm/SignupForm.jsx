@@ -42,7 +42,7 @@ export default class SignupForm extends Component{
             <div>
                 
             {/* <h1>Sign Up</h1> */}
-            <section className="signup-grid">
+            <section >
             <div>
                 <form className="SignupForm" autoComplete="off" onSubmit={this.handleSubmit}>
                     
@@ -106,3 +106,4 @@ export default class SignupForm extends Component{
         )
     }
 }
+// className="signup-grid"

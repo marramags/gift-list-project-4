@@ -37,7 +37,7 @@ export default function LoginForm({setUser}) {
 
     return (
         <div>
-            <section className="signup-grid">
+            <section >
         {/* <h1>Login Form</h1> */}
         <form className="LoginForm" autoComplete="off" onClick={handleSubmit}>
             <div>
@@ -59,4 +59,8 @@ export default function LoginForm({setUser}) {
         </section>
         </div>
     )
+
+
+    
 }
+// className="signup-grid"

@@ -40,13 +40,15 @@ export default function AuthPage({setUser}) {
     }}> */}
               {/* <div style={myStyle}> */}
 
-       
+        <div className="authpage-info">     
         <h1 className="authpage-title">The Gifting List</h1>
         <div className='auth-page'>
         <h2 onClick={() => setShowLogin(!showLogin)}> {showLogin ?  'LOG IN' : 'SIGN UP'} </h2>
         </div>
+        </div> 
+        <div className='auth-forms'>
         {showLogin ? <LoginForm setUser={setUser}/> : <SignupForm setUser={setUser}/>}
-        
+        </div>
         {/* </div> */}
         </container>
         </>
