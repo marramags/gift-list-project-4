@@ -4,17 +4,14 @@ signup-grid{
     grid-template-columns: repeat(10, 1fr);
 }
 
-.SignupForm {
+.LoginForm {
     /* text-align: left; */
-    margin: 0 auto;
+    margin: 1000 auto 0 auto;
     /* justify-content:right; */
     align-items: center;
     display: inline-block;
     width: 400px;
     background-color: #a9e5de;
     padding: 20px;
-}
-
-div{
-    background-image: url("https://unsplash.com/photos/x2lm26Rs2PM");
+    /* height: 177px; */
 }

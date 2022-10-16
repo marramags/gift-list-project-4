@@ -1,12 +1,38 @@
 .auth-page {
-    background-color: olivedrab;
+    background-color: #43AAA7;
     cursor: pointer;
     width: 100px;
     margin: 0 auto;
 }
 
-signup-grid{
+.signup-grid{
     display: grid;
     grid-template-rows: repeat(10, 1fr);
     grid-template-columns: repeat(10, 1fr);
+    background-image: 
+  url(
+"https://media.geeksforgeeks.org/wp-content/uploads/rk.png");
+  background-size: "cover";
+  height: 100vh;
+  margin-top: -70px;
+  /* font-size:50px; */
+  background-repeat:no-repeat; 
+}
+
+container{
+    background-image: url("https://i.imgur.com/QGdj0IL.jpg");
+    background-size: "cover";
+  height: 100vh;
+  margin-top: -70px;
+  background-repeat:no-repeat; 
+    margin: 0 auto;
+    display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.authpage-title{
+    padding: 150px auto 0 auto;
+    margin: 100px auto 20px auto;
+    
 }
