@@ -10,8 +10,9 @@ export default function AuthPage({setUser}) {
     const [showLogin, setShowLogin] = useState(true)
 
     return (
-        <>
-        <container className='background-img'>
+        <div className='background'>
+        
+        {/* <container > */}
         <section className="signup-grid" >
             <div className="auth-logo-background">
         <img className="auth-logo" src="https://i.imgur.com/t8vyIjz.png" title="source: imgur.com" />
@@ -25,18 +26,18 @@ export default function AuthPage({setUser}) {
         </div> */}
         </div> 
         <div className='auth-forms'>
-        {showLogin ? <SignupForm setUser={setUser}/> : <LoginForm setUser={setUser}/>}
+        {showLogin ? <LoginForm setUser={setUser}/> : <SignupForm setUser={setUser}/> }
         </div>
         
-        <div className='user-options'>Already a member? 
+        <div className='user-options'>
         &nbsp; 
-        <span className='user-options-link' onClick={() => setShowLogin(!showLogin)}> {showLogin ?  'LOG IN' : 'SIGN UP'}</span>
+        <span className='user-options-link' onClick={() => setShowLogin(!showLogin)}> {!showLogin ?  'LOG IN HERE' : 'SIGN UP HERE'}</span>
         </div>
         
         {/* </div> */}
        
         </section>
-        </container>
-        </>
+        {/* </container> */}
+        </div>
     )
 }

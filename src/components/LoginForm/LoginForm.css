@@ -4,7 +4,7 @@ signup-grid{
     grid-template-columns: repeat(10, 1fr); */
 }
 
-h3 {
+.login-label {
     background-color: #a9e5de;
     width: 340px;
     padding: 20px 0 0 0;
