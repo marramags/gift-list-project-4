@@ -14,8 +14,10 @@ This app allows users to organize and plan out their holiday shopping. Most holi
 
 ## Links:
 *   [ERD Diagram](https://lucid.app/lucidspark/8d3ca263-912c-4473-bb17-757609d31043/edit?viewport_loc=53%2C-667%2C1855%2C1359%2C0_0&invitationId=inv_06ee354d-8195-4c78-bd72-1a2fe250659f)
+![ERD](https://i.imgur.com/rMjoqhu.png)
 
 *   [Wireframe](https://www.figma.com/file/RGTvNiYQ9f9lX3rYUUSjlD/The-Gifting-List?node-id=7%3A893)
+![Wireframe](https://i.imgur.com/S2XZ9sa.png)
 
 *   [Trello](https://trello.com/b/YDwoETv7/the-gifting-list)
 
