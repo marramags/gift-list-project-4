@@ -4,6 +4,13 @@ signup-grid{
     grid-template-columns: repeat(10, 1fr); */
 }
 
+.login-label {
+    background-color: #a9e5de;
+    width: 340px;
+    padding: 20px 0 0 0;
+    margin: 0 auto;
+}
+
 .LoginForm {
     /* text-align: left; */
     margin: 1000 auto 0 auto;
@@ -15,3 +22,24 @@ signup-grid{
     padding: 20px;
     /* height: 177px; */
 }
+
+.login-btn {
+    border-radius: 9px; 
+     margin: 10px 0 0 0;
+     cursor:pointer;
+     background-color:#F6AFB7;
+     color: white;
+     border: none;
+     outline: 2px solid #F6AFB7;
+     padding: 5px 10px;
+     font-weight: bold;
+ }
+ 
+ .login-btn:hover {
+     border-radius: 9px; 
+      margin: 10px 0 0 0;
+      background-color:white;
+      color: #F6AFB7;
+      border: none;
+      padding: 5px 10px;
+  }
