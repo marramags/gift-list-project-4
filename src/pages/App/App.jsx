@@ -31,13 +31,20 @@ function App() {
       // <GiftListPage />
       <>
       <NavBar user={user} setUser={setUser}/>
+      {/* <Homepage user={user} setUser={setUser}/> */}
       <Routes>
+        <Route path="/" element={<Homepage user={user} />} />
         <Route path="/giftlist" element={<GiftListPage gifts={gifts} user={user} setGifts={setGifts}/>} />
         <Route path="/recipients" element={<Recipients user={user}/>} />
+        
+
       </Routes>
       </>
       :
+      <>
       <AuthPage setUser={setUser}/>
+      {/* <Homepage user={user} setUser={setUser}/> */}
+      </>
       }
       
     </div>
