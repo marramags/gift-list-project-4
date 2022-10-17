@@ -12,7 +12,7 @@ export default function NavBar({user, setUser}){
     return(
         <nav>
             <ul>
-            <li ><Link to="/homepage">
+            <li ><Link to="/">
                 <img className='nav-img' 
                 src="https://i.imgur.com/t8vyIjz.png" title="The Gifting List" />
                 <span className='logo-name'>The Gifting List</span></Link> </li>
@@ -21,7 +21,7 @@ export default function NavBar({user, setUser}){
             &nbsp;               
             <li ><Link to="/giftlist">Gift List</Link></li>
             &nbsp; | &nbsp;
-            <li > <Link to="/recipients" >Recipients</Link>  </li>
+            <li > <Link to="/recipients">Recipients</Link>  </li>
             &nbsp; | &nbsp;
             Welcome, {user.name}!
             &nbsp; | &nbsp;
