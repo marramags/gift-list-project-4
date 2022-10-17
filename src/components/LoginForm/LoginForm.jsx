@@ -38,7 +38,7 @@ export default function LoginForm({setUser}) {
     return (
         <div>
             <section >
-        <h3 className="login-label">Login Form</h3>
+        <h3 className="login-label">Log In</h3>
         <form className="LoginForm" autoComplete="off" onClick={handleSubmit}>
             <div>
             <label>Email</label>
