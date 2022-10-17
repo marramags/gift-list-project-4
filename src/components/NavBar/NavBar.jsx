@@ -19,13 +19,13 @@ export default function NavBar({user, setUser}){
             
             &nbsp;
             &nbsp;   </li>            
-            <li className='right-link'><Link to="/giftlist">Gift List</Link>
+            <li className='right-link'><Link className='nav-link' to="/giftlist">Gift List</Link>
             &nbsp; | &nbsp;</li>
-            <li className='right-link'> <Link to="/recipients">Recipients</Link>  
+            <li className='right-link'> <Link className='nav-link'to="/recipients">Recipients</Link>  
             &nbsp; | &nbsp;</li>
             <li className='right-link'>Welcome, {user.name}!
             &nbsp; | &nbsp;</li>
-            <li className='right-link'><Link to="" onClick={handleLogOut} >Log Out</Link></li>
+            <li className='right-link'><Link className='nav-link' to="" onClick={handleLogOut} >Log Out</Link></li>
             </ul>
         </nav>
     )
