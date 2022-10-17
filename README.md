@@ -63,4 +63,16 @@ I enjoy a sleek and beautiful aesthetic and I had plans to make this app into so
 ##### *BUGS*
 Some bugs and errors I ran into were cryptic and some took me a bit of time to figure out. Thankfully, I have learned to have more patience when experiencing bugs and I had a great support group within my cohort to share ideas and possible solutions to fixing errors. As I progessed throughout the projects, I learned how to read errors quickly and pinpoint why the application was "unhappy." 
 
+## Shout Outs!
+A huge thanks to the entire cohort and the instructors for all the help, guidance, brainstorming sessions, and overall amazing company. 
+
+
 ## Future Enhancements:
+*  Recipient details page
+*  Edit the recipient information and gift details
+*  Add a link to the gift information
+*  Add the prices of all the gifts
+*  Add an events/gift exchange page
+*  Add collaborators
+*  Add a form/chat feature to for users to share gift ideas
+*  Add a 3rd party shopping tool
