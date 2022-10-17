@@ -33,12 +33,29 @@ input, select {
 }
 
 .new-gift-btn {
+    box-shadow: 3px 3px 3px grey;
+
     margin: 10px 0 0 0;
     border-radius: 5px;
     border: none;
     /* background-color:#b53636; */
     background-color:#d33434;
-    
+    cursor: pointer;
+    color: white;
+    font-size: 16px;
+    padding: 5px 10px;
+}
+
+.new-gift-btn:hover {
+    /* box-shadow: 3px 3px 3px grey; */
+
+    margin: 10px 0 0 0;
+    border-radius: 5px;
+    border: none;
+    /* background-color:#b53636; */
+    outline: 2px solid #a51a1a;
+    background-color:#d33434;
+    cursor: pointer;
     color: white;
     font-size: 16px;
     padding: 5px 10px;
