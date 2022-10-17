@@ -9,10 +9,13 @@
   grid-template-rows: repeat(5, 1fr);
   grid-template-columns: repeat(5, 1fr);
   background-color:dimgrey;
-  /* background-image: url("https://images.unsplash.com/photo-1510284876186-b1a84b94418f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"); */
+         background-image: url("https://i.imgur.com/B8f8Yfc.jpg");
+
+  /* background-image: url("https://images.unsplash.com/photo-1545470941-1630430ba8c9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80"); */
   /* background-image: url("https://images.unsplash.com/photo-1510284876186-b1a84b94418f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"); */
 
   /* background-image: url("https://images.unsplash.com/photo-1576919228236-a097c32a5cd4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80"); */
+  background-size:contain;
   align-items: center;
   justify-content: center; 
   border-radius: 10px;
@@ -39,7 +42,7 @@ margin: 0 auto;
 
      /* background-image: url("https://images.unsplash.com/photo-1576919228236-a097c32a5cd4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80"); */
     background-repeat:no-repeat; 
-       /* background-image: url("https://i.imgur.com/QGdj0IL.jpg"); */
+       /* background-image: url("https://i.imgur.com/RiFXHoO.jpg"); */
 background-size: "cover";
 max-height: 100vh;
 }
@@ -90,7 +93,9 @@ flex-direction: column;
     /* flex-direction: column; */
     align-items: center;
     justify-content: center;
-    grid-column: 4/5;
+    /* grid-column: 4/5;
+    grid-row:2/3; */
+    grid-column: 5/3;
     grid-row:2/3;
     /* background-color: white; */
 
@@ -98,8 +103,8 @@ flex-direction: column;
 }
 
 .auth-forms{
-  grid-column: 4/5;
-  grid-row:3/4;
+  grid-column: 5/7;
+  grid-row:2/4;
   /* grid-column-start: 5;
     grid-column-end: 8;
     grid-row-start: row1-start;
@@ -118,4 +123,11 @@ flex-direction: column;
   width:400px;
   margin:0;
   
+}
+
+.auth-img {
+  /* height:100%; */
+  width: 100%;
+  grid-column: 1/6;
+  grid-row:1/6;
 }

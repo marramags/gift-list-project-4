@@ -44,6 +44,7 @@ export default function AuthPage({setUser}) {
         {/* <div> */}
         <div className="authpage-info">     
         <h1 className="authpage-title">The Gifting List</h1>
+       
         <div className='auth-page'>
         <h2 onClick={() => setShowLogin(!showLogin)}> {showLogin ?  'LOG IN' : 'SIGN UP'} </h2>
         </div>
@@ -52,7 +53,7 @@ export default function AuthPage({setUser}) {
         {showLogin ? <LoginForm setUser={setUser}/> : <SignupForm setUser={setUser}/>}
         </div>
         {/* </div> */}
-       
+        {/* <img className="auth-img" src="https://i.imgur.com/cGElqTU.jpg"/> */}
         </section>
         </container>
         </>
