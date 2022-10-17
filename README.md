@@ -37,6 +37,7 @@ This app allows users to organize and plan out their holiday shopping. Most holi
 
 ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
 
+![Vecteezy.com](https://www.vecteezy.com/?utm_source=vecteezy-download&utm_medium=license-info-pdf&utm_campaign=license-info-document)
 
 
 ## Wins:
