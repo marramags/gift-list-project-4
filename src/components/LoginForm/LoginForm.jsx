@@ -38,7 +38,7 @@ export default function LoginForm({setUser}) {
     return (
         <div>
             <section >
-        {/* <h1>Login Form</h1> */}
+        <h3>Login Form</h3>
         <form className="LoginForm" autoComplete="off" onClick={handleSubmit}>
             <div>
             <label>Email</label>
@@ -52,7 +52,7 @@ export default function LoginForm({setUser}) {
             <div>
             <input type="password" name="password" value={credentials.password} onChange={handleChange} required/>
             </div>
-            <button type="submit">Log In</button>
+            <button className="login-btn" type="submit">Log In</button>
            
         </form>
 

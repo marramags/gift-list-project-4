@@ -4,6 +4,13 @@ signup-grid{
     grid-template-columns: repeat(10, 1fr); */
 }
 
+h3 {
+    background-color: #a9e5de;
+    width: 340px;
+    padding: 20px 0 0 0;
+    margin: 0 auto;
+}
+
 .SignupForm {
     /* text-align: left; */
     margin: 0 auto;
@@ -19,6 +26,27 @@ signup-grid{
     grid-row-end:5;
 }
 
-div{
+/* div{
     background-image: url("https://unsplash.com/photos/x2lm26Rs2PM");
+} */
+
+.signup-btn {
+   border-radius: 9px; 
+    margin: 10px 0 0 0;
+    cursor:pointer;
+    background-color:#F6AFB7;
+    color: white;
+    border: none;
+    outline: 2px solid #F6AFB7;
+    padding: 5px 10px;
+    font-weight: bold;
 }
+
+.signup-btn:hover {
+    border-radius: 9px; 
+     margin: 10px 0 0 0;
+     background-color:white;
+     color: #F6AFB7;
+     border: none;
+     padding: 5px 10px;
+ }

@@ -25,12 +25,13 @@ export default function AuthPage({setUser}) {
         </div> */}
         </div> 
         <div className='auth-forms'>
-        {showLogin ? <LoginForm setUser={setUser}/> : <SignupForm setUser={setUser}/>}
+        {showLogin ? <SignupForm setUser={setUser}/> : <LoginForm setUser={setUser}/>}
         </div>
         
-        <span className='user-options'>Already a member? 
-        <span className='auth-page'><p onClick={() => setShowLogin(!showLogin)}> {showLogin ?  'LOG IN' : 'SIGN UP'}</p></span>
-        </span>
+        <div className='user-options'>Already a member? 
+        &nbsp; 
+        <span className='user-options-link' onClick={() => setShowLogin(!showLogin)}> {showLogin ?  'LOG IN' : 'SIGN UP'}</span>
+        </div>
         
         {/* </div> */}
        
