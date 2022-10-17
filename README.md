@@ -13,6 +13,14 @@ This app allows users to organize and plan out their holiday shopping. Most holi
 
 ## Wins:
 
+##### *TECHNICAL GROWTH*
+After the past 12 weeks of the bootcamp, I can certainly feel and see the growth from where I started on Day One. I know I have a lot more to learn but my confidence and comfortability (or even lack of comfortability) is developing each day. The MERN stack is quite complex to me and I am surprised at how I was able to follow along and utilize the basics from the past units to complete this project.
+
+##### *COLLABORATION & COMMUNICATION*
+Although this was a solo project, I didn't feel like I was on my own during the process. My cohort members and I collaborated everyday trying to: fix each other's bugs, share ideas, share thought processes, lift each other up, and celebrate the wins. This was a highlight of the project. I now see and understand how collaborative this work and industry is and I look forward to learn and practice these skills throughout my journey.
+
+##### *PERSONAL GROWTH*
+This project has tested every part of my being and yet I somehow managed to summon the energy, courage, and patience to continue. I overcame mental doubts like imposter syndrome and am truly opening myself up to this learning journey. I'm also learning that I don't have to go through this alone. I challenged myself put my pride aside and reach out for help or guidance. Through those interactions, I am learning that it is okay to not know everything, people are willing to help, and more benefits come out of it than I realized. From the wise words of Moira Rose: “When one of us shines, all of us shine.” I know where I am at and I know where I should go to only get better.
 
 ## Challenges:
 This project came with a handful of challenges and I was able to overcome several. One in particular is time management, organizing my thoughts, and knowing how to use available resources. 
