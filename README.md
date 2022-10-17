@@ -10,7 +10,7 @@ This app allows users to organize and plan out their holiday shopping. Most holi
 *  AAU, I want to be able to delete the gift item and recipient
 *  AAU, I want to update the gift status as purchased when bought
 
-[Gifting List Landing Page](https://i.imgur.com/vAIcLaZ.png)
+![Gifting List Landing Page](https://i.imgur.com/vAIcLaZ.png)
 
 ## Links:
 *   [ERD Diagram](https://lucid.app/lucidspark/8d3ca263-912c-4473-bb17-757609d31043/edit?viewport_loc=53%2C-667%2C1855%2C1359%2C0_0&invitationId=inv_06ee354d-8195-4c78-bd72-1a2fe250659f)
