@@ -1,13 +1,20 @@
 # The Gifting List
+#### [Check out the App!]()
 
 ## App Features (description)
 This app allows users to organize and plan out their holiday shopping. Most holiday apps focus on wishlists to share with others. The Gifting List prioritizes simple and  easy functionality to keep track of who's on the user's shopping list and the purchased status. This app was born to keep the true holiday spirit and hopefully alleviates some holiday stress.
 
 ### User Stories:
+*  AAU, I want to be able to sign up, log in, and log out
+*  AAU, I want to be able to add a recipient, relation, and gift info
+*  AAU, I want to be able to delete the gift item and recipient
+*  AAU, I want to update the gift status as purchased when bought
 
-## ERD:
+## Links:
+*   [ERD Diagram](https://lucid.app/lucidspark/8d3ca263-912c-4473-bb17-757609d31043/edit?invitationId=inv_06ee354d-8195-4c78-bd72-1a2fe250659f#)
 
 ## Wireframe: 
+*   [Wireframe](https://www.figma.com/file/RGTvNiYQ9f9lX3rYUUSjlD/The-Gifting-List?node-id=7%3A893)
 
 ## Technologies Used:
 
