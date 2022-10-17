@@ -14,8 +14,8 @@ export default function NavBar({user, setUser}){
             <ul>
             <li ><Link to="/homepage">
                 <img className='nav-img' 
-                src="https://i.imgur.com/j1FpRgw.png" 
-                title="The Gifting List" /><span className='logo-name'>The Gifting List</span></Link> </li>
+                src="https://i.imgur.com/t8vyIjz.png" title="The Gifting List" />
+                <span className='logo-name'>The Gifting List</span></Link> </li>
             
             &nbsp;
             &nbsp;               
