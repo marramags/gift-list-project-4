@@ -65,4 +65,3 @@ export default function LoginForm({setUser}) {
 
     
 }
-// className="signup-grid"

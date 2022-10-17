@@ -11,27 +11,16 @@ import Homepage from '../Homepage/Homepage';
 
 function App() {
 
-  // const giftArray = [
-  //   {name:"Jeryl", relation: "Partner", item:"movie poster", description: 'Marvel movie poster', storeLink:'greymatterart.com'}
-  // ]
-
   const [user, setUser] = useState(getUser())
   const [gifts, setGifts] = useState([]);
-  // const [showGifts, setShowGifts] = useState(true)
-
-  
 
   return (
     <div className="App">
-      {/* <NavBar user={user} setUser={setUser}/> */}
-      {/* <h1>The Gifting List</h1> */}
-      {/* <Homepage/> */}
       
       { user ?
       // <GiftListPage />
       <>
       <NavBar user={user} setUser={setUser}/>
-      {/* <Homepage user={user} setUser={setUser}/> */}
       <Routes>
         <Route path="/" element={<Homepage user={user} />} />
         <Route path="/giftlist" element={<GiftListPage gifts={gifts} user={user} setGifts={setGifts}/>} />
@@ -43,7 +32,6 @@ function App() {
       :
       <>
       <AuthPage setUser={setUser}/>
-      {/* <Homepage user={user} setUser={setUser}/> */}
       </>
       }
       
