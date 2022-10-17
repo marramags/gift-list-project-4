@@ -64,7 +64,7 @@ I enjoy a sleek and beautiful aesthetic and I had plans to make this app into so
 Some bugs and errors I ran into were cryptic and some took me a bit of time to figure out. Thankfully, I have learned to have more patience when experiencing bugs and I had a great support group within my cohort to share ideas and possible solutions to fixing errors. As I progessed throughout the projects, I learned how to read errors quickly and pinpoint why the application was "unhappy." 
 
 ## Shout Outs!
-A huge thanks to the entire cohort and the instructors for all the help, guidance, brainstorming sessions, and overall amazing company. 
+I want to thank the entire cohort and the instructors for all the help, guidance, brainstorming sessions, and overall amazing company throughout this experience. A big shout out to Emily for helping me get the checkboxes working. A big shout out to the instructors for their encouragement, guidance, and belief in me that I can push on through. A big shout out to Ann for being my cheerleader and igniting my fighting spirit. Lastly, a big shout out to the entire cohort for keeping it real, sharing laughs, going through the motions, showing support, and just making this pivot one I will always remember.
 
 
 ## Future Enhancements:
