@@ -8,9 +8,8 @@ import './GiftListPage.css'
 export default function GiftListPage({gifts, user, setGifts}) {
 
     const [giftList, setGiftList] = useState([])
-
     const [state, setState] = useState({complete:false})
-  
+
     const navigate = useNavigate();
     
     useEffect(function() {
@@ -23,16 +22,11 @@ export default function GiftListPage({gifts, user, setGifts}) {
       }, [])
 
 
-      console.log(giftList)
-
-      
     async function handleChange (e, id, check){
       check ? setState(false) : setState(true)
       const completedGift = await giftsAPI.completeGifts(id, state.complete);
-      
     }
     
-
   
     async function handleDelete(id) {
       const deletingGift = await giftsAPI.deleteGift(id);
@@ -51,14 +45,13 @@ export default function GiftListPage({gifts, user, setGifts}) {
         </section>
         <table>
       <tr>
-      <th>Giftee</th>
-    <th>Relation</th>
-    <th>Gift Item</th>
-    <th>Price</th>
-    <th>Store</th>
-    <th>Purchased?</th>
-    <th>Remove</th>
-
+        <th>Giftee</th>
+        <th>Relation</th>
+        <th>Gift Item</th>
+        <th>Price</th>
+        <th>Store</th>
+        <th>Purchased?</th>
+        <th>Remove</th>
       </tr>
       
         {giftList.map(function(gift, index) {
@@ -70,10 +63,6 @@ export default function GiftListPage({gifts, user, setGifts}) {
           <td> ${gift.giftItems[0].price} </td>
           <td> <span className="storeLink">{gift.giftItems[0].storeLink}</span></td>
       
-        
-  
-
-    
         <td>
         <label class="main">
         <input className="checkbox" type="checkbox" 
