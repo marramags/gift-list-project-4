@@ -1,6 +1,121 @@
+
+
+.signup-grid{
+
+  display: grid;
+  flex-direction:row;
+  /* grid-template-rows: repeat(10, 1fr);
+  grid-template-columns: repeat(10, 1fr); */
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-columns: repeat(5, 1fr);
+  background-color:dimgrey;
+  background-image: url("https://images.unsplash.com/photo-1510284876186-b1a84b94418f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+  /* background-image: url("https://images.unsplash.com/photo-1510284876186-b1a84b94418f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"); */
+
+  /* background-image: url("https://images.unsplash.com/photo-1576919228236-a097c32a5cd4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80"); */
+  align-items: center;
+  justify-content: center; 
+  border-radius: 10px;
+  /* border: 6px dashed #43AAA7; */
+  /* gap: 50px; */
+  /* background-image: 
+url(
+"https://media.geeksforgeeks.org/wp-content/uploads/rk.png"); */
+/* background-size: "cover"; */
+/* max-height: 100vh; */
+max-height: 500px;
+width: 100%;
+max-width:800px;
+/* margin-top: -70px; */
+/* font-size:50px; */
+background-repeat:no-repeat; 
+margin: 0 auto;
+}
+
+.background-img{
+  background-color: #E4E4E4;
+   /* background-image: url("https://images.unsplash.com/photo-1510284876186-b1a84b94418f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"); */
+      /* background-image: url("https://images.unsplash.com/photo-1545470941-1630430ba8c9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80"); */
+
+     /* background-image: url("https://images.unsplash.com/photo-1576919228236-a097c32a5cd4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80"); */
+    background-repeat:no-repeat; 
+       /* background-image: url("https://i.imgur.com/QGdj0IL.jpg"); */
+background-size: "cover";
+max-height: 100vh;
+}
+
+container{
+  /* background-image: url("https://i.imgur.com/QGdj0IL.jpg"); */
+  /* background-size: "cover"; */
+/* height: 100vh; */
+margin-top: -70px;
+background-repeat:no-repeat; 
+  margin: 0 auto;
+  display: flex;
+align-items: center;
+/* justify-content: center; */
+flex-direction: column;
+}
+
 .auth-page {
-    background-color: olivedrab;
+    background-color: #43AAA7;
     cursor: pointer;
     width: 100px;
     margin: 0 auto;
+    /* grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: row3-start;
+    grid-row-end:4; */
+    /* grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: row1-start;
+    grid-row-end:2; */
+}
+
+
+
+.authpage-info{
+    /* padding: 150px auto 0 auto; */
+    /* margin: 100px auto 20px auto; */
+    /* grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: row1-start;
+    grid-row-end:5; */
+
+    /* grid-column-start: 1;
+    grid-column-end: 5; */
+    /* grid-row-start: row1-start; */
+    /* grid-row-end:4; */
+    /* width:800px; */
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: center;
+    grid-column: 4/5;
+    grid-row:2/3;
+    /* background-color: white; */
+
+    
+}
+
+.auth-forms{
+  grid-column: 4/5;
+  grid-row:3/4;
+  /* grid-column-start: 5;
+    grid-column-end: 8;
+    grid-row-start: row1-start;
+    grid-row-end:3; */
+
+    /* grid-column-start: 4;
+    grid-column-end: 6;
+    grid-row-start: row1-start;
+    grid-row-end:1;
+    flex-direction: column; */
+}
+
+.authpage-title{
+  font-family: 'Damion', cursive;
+  font-size: 80px;
+  width:400px;
+  margin:0;
+  
 }

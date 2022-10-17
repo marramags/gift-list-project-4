@@ -1,0 +1,17 @@
+signup-grid{
+    display: grid;
+    /* grid-template-rows: repeat(10, 1fr);
+    grid-template-columns: repeat(10, 1fr); */
+}
+
+.LoginForm {
+    /* text-align: left; */
+    margin: 1000 auto 0 auto;
+    /* justify-content:right; */
+    align-items: center;
+    display: inline-block;
+    width: 300px;
+    background-color: #a9e5de;
+    padding: 20px;
+    /* height: 177px; */
+}

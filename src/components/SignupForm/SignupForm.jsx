@@ -1,5 +1,6 @@
 import { Component } from "react";
 import { signUp } from '../../utilities/users-service';
+import './SignupForm.css'
 
 
 export default class SignupForm extends Component{
@@ -39,16 +40,23 @@ export default class SignupForm extends Component{
 
         return (
             <div>
-            <h1>Sign Up</h1>
+                
+            {/* <h1>Sign Up</h1> */}
+            <section >
             <div>
-                <form autoComplete="off" onSubmit={this.handleSubmit}>
-                    <label>Name</label>
+                <form className="SignupForm" autoComplete="off" onSubmit={this.handleSubmit}>
+                    
+                    <div><label>Name</label></div>
+
+                    <div>
                     <input type="text"
                     name="name"
                     value={this.state.name}
                     onChange={this.handleChange}
                     required
                     />
+                    </div>
+
                     {/* <label>Username</label>
                     <input type="text"
                     name="username"
@@ -56,31 +64,46 @@ export default class SignupForm extends Component{
                     onChange={this.handleChange}
                     required
                     /> */}
-                    <label>Email</label>
+                    
+                    <div><label>Email</label></div>
+
+                    <div>
                     <input type="email" 
                     name="email" 
                     value={this.state.email}
                     onChange={this.handleChange}
                     required
                     />
-                    <label>Password</label>
+                    </div>
+
+                    <div><label>Password</label></div>
+
+                    <div>
                     <input type="password" 
                     name="password" 
                     value={this.state.password}
                     onChange={this.handleChange}
                     required
                     />
-                    <label>Confirm</label>
+                    </div>   
+
+                    <div><label>Confirm</label></div>
+
+                    <div>
                     <input type="password" 
                     name="confirm" 
                     value={this.state.confirm}
                     onChange={this.handleChange}
                     required
                     />
+                    </div>
+
                     <button type="submit" disabled={disable}>Sign Up</button>
                 </form>
             </div>
+            </section>
             </div>
         )
     }
 }
+// className="signup-grid"

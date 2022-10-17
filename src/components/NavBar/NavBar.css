@@ -50,7 +50,7 @@ ul {
 li {
     display: inline-block;
 
-    background-color: #43AAA7;
+    /* background-color: #43AAA7; */
     vertical-align: middle;
     /* text-decoration: none; */
     height: 45px;
@@ -82,6 +82,7 @@ li {
     display: inline-block;
     /* text-align:left; */
     vertical-align: middle;
+    font-family: 'Damion', cursive;
     /* height: 45px; */
 }
 
@@ -89,5 +90,7 @@ li {
     display: inline-block;
     /* text-align:left; */
     vertical-align: middle;
+    
+
     /* height: 45px; */
 }

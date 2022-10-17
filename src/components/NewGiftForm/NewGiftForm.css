@@ -5,12 +5,17 @@
     align-items: center;
     display: inline-block;
     width: 400px;
-    background-color: darkolivegreen;
+    /* background-color: #D1E8D6; */
+    background-color:#85C3B4;
     padding: 20px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px grey;
+
+    /* outline:3px inset #b53636; */
 }
 
 .relationOptions {
-    width: 149px;
+    width: 170px;
     /* padding: 1px 2px; */
     /* border: 2px; */
 }
@@ -18,4 +23,23 @@
 h3 {
     margin: 0 0 10px 0;
     
+}
+input, select {
+    margin: 5px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    
+}
+
+.new-gift-btn {
+    margin: 10px 0 0 0;
+    border-radius: 5px;
+    border: none;
+    /* background-color:#b53636; */
+    background-color:#d33434;
+    
+    color: white;
+    font-size: 16px;
+    padding: 5px 10px;
 }
