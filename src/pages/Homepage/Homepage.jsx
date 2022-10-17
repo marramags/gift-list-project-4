@@ -14,7 +14,7 @@ export default function Homepage() {
        <img className="home-img" src="https://i.imgur.com/H7gc98J.png" title="source: imgur.com" />
        </div>
        
-       <div className="gift-link"> <Link className="gift-link" to="/giftlist">Let's get gifting!</Link></div>
+       <div className="link-placement"> <Link className="gift-link" to="/giftlist">Let's get gifting!</Link></div>
         </>
     )
 }

@@ -8,46 +8,29 @@ nav {
     
 }
 
-.nav-link{
-    /* display: inline-block; */
-    /* vertical-align: middle; */
-    /* align-items: center; */
-    /* height: 45px; */
-    /* align-items: center; */
-    /* vertical-align: middle; */
-
-
-}
 
 .nav-img{
-    /* display: inline-block; */
     width: 30px;
     height: 30px;
-    /* position:fixed;  */
     float:left;
     vertical-align: middle;
-    /* height: 45px; */
     margin-left: 15px;
 }
 
 ul {
-    /* text-decoration: none; */
     list-style-type: none;
     height: 45px;
-    /* text-align:right; */
     margin: auto 0;
-    /* display: table; */
-    /* margin: 0 auto; */
-    /* padding: 0; */
-    /* padding: 0; */
+    
     align-items: center;
 padding: 10px 0 0 0;
     text-align:right;
     margin-right: 20px;
 
-    /* position: relative; */
 
   }
+
+
   li{
         justify-items: center;
         align-items: center;
@@ -65,32 +48,19 @@ padding: 10px 0 0 0;
     text-decoration: underline;
     text-decoration-color: #F6AFB7;
     text-decoration-thickness: 3px;
-    transition-duration: 0.3s;
+    transition-duration: 0.1s;
   }
 
  .right-link {
     color: black;
     display: inline;
-    /* float: right; */
-    /* background-color: #43AAA7; */
-    /* vertical-align: middle; */
-    /* text-decoration: none; */
     height: 45px;
-    /* list-style: none; */
-    /* text-align:right; */
-    /* justify-items: center; */
     align-items: center;
     text-align: right;
     vertical-align: middle;
-    /* padding: 10px 8px; */
 
 }
 
-  /* li:first-child {
-    float: left;
-    align-items: center;
-    vertical-align: middle;
-} */
 
 .left-link{
  float: left;
@@ -99,33 +69,22 @@ padding: 10px 0 0 0;
 .logo-name{
     display: inline;
     text-align:left; 
-    /* vertical-align: middle; */
-    /* height: 45px; */
     float: left;
 
 }
-
-/* span.right {
-    float: right;
-  } */
 
 
 
 .logo-name{
     display: inline;
-    /* text-align:left; */
     vertical-align: middle;
     font-family: 'Damion', cursive;
     font-size: 20px;
     color: black;
-    /* height: 45px; */
 }
 
 .test-name{
     display: inline-block;
-    /* text-align:left; */
     vertical-align: middle;
-    
-
     height: 45px;
 }

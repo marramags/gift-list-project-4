@@ -27,16 +27,31 @@
     display: inline-block;
 }
 
+.link-placement{
+    margin: 85px 0;
+}
+
 .gift-link{
-    color:#a51a1a;
+    color:white;
     font-weight: 600;
-    margin: 70px 0;
+    margin: 170px auto 0 auto;
     font-size: 20px;
+    background-color: #F6AFB7;
+    width: 200px;
+    border-radius: 20px;
+    padding: 8px 12px;
+    text-decoration: none;
 }
 
 .gift-link:hover{
     color:#d33434;
     font-weight: 600;
-    margin: 70px 0;
+    width: 200px;
+    margin: 70px auto 0 auto;
+    padding: 8px 12px;
     font-size: 20px;
+    outline: 2px solid #d33434;
+    border-radius: 20px;
+
+
 }
