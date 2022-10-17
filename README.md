@@ -11,12 +11,21 @@ This app allows users to organize and plan out their holiday shopping. Most holi
 *  AAU, I want to update the gift status as purchased when bought
 
 ## Links:
-*   [ERD Diagram](https://lucid.app/lucidspark/8d3ca263-912c-4473-bb17-757609d31043/edit?invitationId=inv_06ee354d-8195-4c78-bd72-1a2fe250659f#)
+*   [ERD Diagram](https://lucid.app/lucidspark/8d3ca263-912c-4473-bb17-757609d31043/edit?viewport_loc=53%2C-667%2C1855%2C1359%2C0_0&invitationId=inv_06ee354d-8195-4c78-bd72-1a2fe250659f)
 
-## Wireframe: 
 *   [Wireframe](https://www.figma.com/file/RGTvNiYQ9f9lX3rYUUSjlD/The-Gifting-List?node-id=7%3A893)
 
+*   [Trello](https://trello.com/b/YDwoETv7/the-gifting-list)
+
 ## Technologies Used:
+![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white)
+
+![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
+
+![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
+
+![Heroku](https://img.shields.io/badge/heroku-%23430098.svg?style=for-the-badge&logo=heroku&logoColor=white)
+
 
 ## Wins:
 
